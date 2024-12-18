@@ -34,7 +34,7 @@ const Welcome = () => {
   return (
     <div 
       id="home-welcome"
-      className="w-full flex items-center justify-center relative">
+      className="w-full flex items-center justify-center relative mb-16">
       <motion.div
         className="w-[90%] sm:w-[85%] md:w-[80%] max-w-[1000px] rounded-xl flex flex-col items-center gap-4 p-4 sm:p-6 md:p-8"
         initial={{ opacity: 0, y: 50 }}  
@@ -50,14 +50,13 @@ const Welcome = () => {
           
         </motion.div>
 
-        {/* Title Section - Mejorado para móvil */}
         <motion.div
-          className="flex flex-col items-center gap-2 sm:gap-4 -mt-2 sm:mt-0"
+          className="flex flex-col items-center gap-2 sm:gap-4  sm:mt-0"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h1 className="title-home-section font-greatVibes  text-6xl md:text-7xl  xl:text-[180px] text-center py-4">
+          <h1 className="title-home-section font-greatVibes  text-7xl md:text-[200px]  xl:text-[200px] text-center pt-5">
             Fx Killers
           </h1>
           <p className="font-urbanist text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-blue1 relative z-10">

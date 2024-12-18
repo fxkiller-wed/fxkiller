@@ -1,39 +1,30 @@
 /*Titulos*/
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .contact-home-highlight {
-  background: linear-gradient(
-    90deg,
-    #b69f57,
-    #ffdb6e,
-    #fffbef,
-    #b69f57
-  ); /* Gradiente con los colores proporcionados */
-  background-size: 200% 100%; /* Hace que el gradiente se mueva */
-  -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
-  color: transparent; /* Hace que el texto sea transparente para solo ver el gradiente */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Sombra suave inicial */
-  display: inline-block; /* Asegura que el texto se pueda animar correctamente */
+  background: linear-gradient(90deg, #b69f57, #ffdb6e, #fffbef, #b69f57);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
   animation: gradientEffect 4s ease-in-out infinite,
-    shadowEffect 4s ease-in-out infinite; /* Animaciones combinadas */
+    shadowEffect 4s ease-in-out infinite;
 }
 
-/* Animación de gradiente */
 @keyframes gradientEffect {
   0% {
-    background-position: 200% 0%; /* El gradiente comienza desde la derecha */
+    background-position: 200% 0%;
   }
   50% {
-    background-position: 0% 0%; /* El gradiente se mueve completamente */
+    background-position: 0% 0%;
   }
   100% {
-    background-position: 200% 0%; /* El gradiente regresa a la posición inicial */
+    background-position: 200% 0%;
   }
 }
 
@@ -55,7 +46,6 @@
   background-size: 200% 100%;
   color: #101010;
   font-size: 18px;
-  font-weight: 600;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   animation: gradientEffect 4s ease-in-out infinite,
     shadowEffect 4s ease-in-out infinite;
@@ -87,6 +77,19 @@
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 10px #1a1a1a;
   transform: translateY(-5px);
+}
+.btn-why-chosee{
+  background: linear-gradient(90deg, #081628, #b69f57, #101010, #081628);
+  background-size: 200% 100%;
+  font-size: 18px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  animation: gradientEffect 8s ease-in-out infinite,
+    shadowEffect 8s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease,
+    background-size 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 0 15px 0 #1a1a1a;
 }
 
 .btn-bg-black {
@@ -127,9 +130,8 @@
 }
 
 .plant-bg-yellow:hover {
-  /* Estilos para cuando el mouse está sobre el botón */
-  transform: scale(1.1); /* Aumenta el tamaño en un 10% */
-  filter: brightness(90%); /* Disminuye ligeramente el brillo */
+  transform: scale(1.1);
+  filter: brightness(90%);
   animation: gradientEffectHover 4s ease-in-out infinite,
     shadowEffectHover 4s ease-in-out infinite;
   color: #ffffff;
@@ -137,71 +139,75 @@
 
 /* Estilos para los titulos verdes  --------------------------------------------- */
 .title-home-section {
-  background: linear-gradient(90deg, #135a3a, #b69f57, #012b20, #135a3a);
-  background-size: 400% 100%; /* Hace que el movimiento del gradiente sea más notable */
+  background: linear-gradient(
+    90deg,
+    #135a3a,
+    #b69f57,
+    #081628,
+    #135a3a
+  );
+  background-size: 400% 100%;
   -webkit-background-clip: text;
-  color: transparent; /* El texto es visible solo a través del gradiente */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra inicial más marcada */
+  color: transparent;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   animation: gradientMove 5s ease-in-out infinite,
-    shadowPulse 8s ease-in-out infinite; /* Animaciones combinadas */
+    shadowPulse 8s ease-in-out infinite;
 }
 
-/* Animación del gradiente */
 @keyframes gradientMove {
   0% {
-    background-position: 0% 0%; /* Inicia desde la izquierda */
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 0%; /* Gradiente se mueve completamente hacia la derecha */
+    background-position: 100% 0%;
   }
   100% {
-    background-position: 0% 0%; /* Regresa a la posición inicial */
+    background-position: 0% 0%;
   }
 }
 
-/* Animación de la sombra */
 @keyframes shadowPulse {
   0%,
   100% {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra suave */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   }
   50% {
-    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9); /* Sombra más intensa */
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
   }
 }
 
 /*Sombre home verde-------------------------------------------------*/
 .shadow-home-green {
-  box-shadow: 0 0 150px 300px #081628; /* Sombra inicial */
-  animation: pulsate-shadow 3s infinite; /* Animación continua */
+  box-shadow: 0 0 150px 300px #081628;
+  animation: pulsate-shadow 3s infinite;
 }
 
 @keyframes pulsate-shadow {
   0% {
-    box-shadow: 0 0 150px 200px #081628; /* Estado inicial */
+    box-shadow: 0 0 150px 200px #081628;
   }
   50% {
-    box-shadow: 0 0 180px 180px #081628; /* Más intensa */
+    box-shadow: 0 0 180px 180px #081628;
   }
   100% {
-    box-shadow: 0 0 150px 200px #081628; /* Vuelve al inicio */
+    box-shadow: 0 0 150px 200px #081628;
   }
 }
 
 .shadow-programs {
-  box-shadow: 0 0 150px 120px rgba(0, 1, 1, 0.715); /* Sombra inicial */
+  box-shadow: 0 0 150px 120px rgba(0, 1, 1, 0.715);
   width: 300px;
 }
 .shadow-about-me {
-  box-shadow: 0 0 110px 120px rgba(16, 199, 117, 0.715); /* Sombra inicial */
+  box-shadow: 0 0 110px 120px rgba(16, 199, 117, 0.715);
 }
 .text-color-black {
   background: linear-gradient(90deg, #ffffff, #434343, #ebebeb, #7a7a7a);
   background-size: 200% 100%;
   font-size: 18px;
-  color: transparent; /* Ocultamos el texto por defecto */
-  background-clip: text; /* Aplicamos el degradado al texto */
-  -webkit-background-clip: text; /* Compatibilidad para navegadores basados en WebKit */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
   animation: gradientEffect 4s ease-in-out infinite,
     shadowEffect 4s ease-in-out infinite;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -209,13 +215,6 @@
     color 2s ease, font-weight 2s ease, background-size 2s ease;
   font-weight: bold;
 }
-
-/*fondo gradiantes*/
 .gradient-bg-1 {
-  background: linear-gradient(
-    to bottom,
-    #f5f5f5,
-    /* Gris arriba */ #e2e2e2,
-    /* Gris medio */ #94a9b9 /* Gris abajo */
-  );
+  background: linear-gradient(to bottom, #f5f5f5, #e2e2e2, #94a9b9);
 }

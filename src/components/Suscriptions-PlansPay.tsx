@@ -47,8 +47,6 @@ const PlansPay: React.FC = () => {
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
       buttonText: "Adquiere Pro Traders",
-      width: "w-[350px]",
-      height: "h-[500px]"
     },
     {
       title: "Coaching 1ON1",
@@ -111,7 +109,7 @@ return (
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className={`bg-[#0a0c18] text-white ${plan.height || "h-[450px]"} ${plan.width || "w-72"} rounded-xl  p-5 flex flex-col justify-between shadow-xl relative`}
+            className={`bg-[#0a0c18] text-white h-[520px] ${plan.width || "w-72"} rounded-xl  p-5 flex flex-col justify-between shadow-xl relative`}
             whileHover={{ 
               scale: 1.05,
               transition: { duration: 0.2 }
