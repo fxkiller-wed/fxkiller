@@ -5,7 +5,7 @@ import Footer from "@/components/Footer"
 const FAQ = () => {
    return(
       <>
-         <div className="min-w-full bg-gray-200 flex flex-col justify-center pt-24 items-center min-h-screen">
+         <div className="min-w-full bg-gray-100 flex flex-col justify-center pt-24 items-center min-h-screen">
             <FAQsAccordions/>
             <FAQsContacts/>
             <Footer/>
