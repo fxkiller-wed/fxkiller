@@ -5,6 +5,7 @@ import FAQs from './pages/FAQs';
 import Contact from './pages/Contact';
 import Error from './pages/Error';  
 import ScrollToTop from './components/ScrollTop';
+import Terms from './pages/Terms';
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
         <Route path="/FAQs" element={<FAQs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<Error />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </>
   );
