@@ -39,30 +39,29 @@ const FAQsAccordions: React.FC = () => {
 
   return (
     <motion.div
-      className="xl:w-[1250px] bg-gradient-green h-auto mx-auto p-5 rounded-2xl flex flex-col py-10 items-center"
+      className="xl:w-[1250px] bg-blue1 h-auto mx-auto p-5 rounded-2xl flex flex-col py-10 items-center"
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5 }}
     >
-      <span className="font-poppins font-semibold text-lg md:text-xl contact-home-highlight text-center">
+      <span className="font-urbanist font-semibold text-lg md:text-xl contact-home-highlight text-center">
         Questions and Answers
       </span>
       <div className="w-full flex flex-col md:flex-row mt-5 justify-center gap-10">
-        {/* Categorías */}
         <div className="flex justify-center flex-col">
-          <div className="text-3xl md:text-5xl font-bold pb-5 mb-3 flex flex-col md:flex-row items-center md:items-start font-display contact-home-highlight text-center md:text-left">
+          <div className="text-3xl md:text-7xl  pb-5 mb-3 flex flex-col md:flex-row items-center md:items-start font-greatVibes contact-home-highlight text-center md:text-left">
             <div className="text-gray-200">Frequently Asked</div>
             <div className="contact-home-highlight">Questions</div>
           </div>
-          <div className="flex flex-col gap-4 w-full md:w-[400px]">
+          <div className="flex flex-col gap-4 w-full md:w-[450px]">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`p-4 text-left font-semibold text-base md:text-lg rounded-xl shadow-lg font-poppins shadow-green2 ${
+                className={`p-4 text-left font-semibold text-base md:text-lg rounded-xl shadow-lg font-urbanist ${
                   selectedCategory === category.id
-                    ? "bg-gradient-to-r from-black via-emerald-950 to-black text-gray-200"
+                    ? "bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100 shadow-md shadow-gray-900"
                     : "contact-btn-form-home text-black"
                 }`}
               >
@@ -79,7 +78,7 @@ const FAQsAccordions: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           {selectedCategory === null ? (
-            <div className="w-full md:w-[600px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-2">
+            <div className="w-full md:w-[600px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-2 xl:mt-6 lg:mt-6">
               <iframe
                 className="w-full aspect-video rounded-xl btn-bg-black shadow-lg shadow-gray-950"
                 src="https://www.youtube.com/embed/NyiDPn4ZO0I"
@@ -96,7 +95,7 @@ const FAQsAccordions: React.FC = () => {
             questions[selectedCategory]?.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl shadow-black bg-gradient-to-r from-black via-emerald-950 to-black text-white shadow-md"
+                className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100 shadow-md shadow-gray-900 "
               >
                 <button
                   className="w-full flex justify-between items-center font-poppins text-md text-left p-4"
@@ -130,7 +129,7 @@ const FAQsAccordions: React.FC = () => {
           {selectedCategory !== null && (
             <button
               onClick={() => setSelectedCategory(null)}
-              className="flex items-center justify-center gap-2 text-white font-poppins font-semibold text-lg p-2 rounded-xl shadow-lg shadow-black bg-gradient-to-r from-black via-emerald-950 to-black  transition duration-300 "
+              className="flex items-center justify-center gap-2 font-poppins font-semibold text-lg p-2 rounded-xl shadow-lg bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100  shadow-gray-900 transition duration-300 "
             >
               <div className="contact-home-highlight hover:text-gray-50">Watch Full Video</div>
             </button>
