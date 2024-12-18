@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaYoutube, FaInstagram, FaDiscord } from "react-icons/fa";
 import SelloFooter from "@/assets/img/footer-sello-FX-killers.png";
