@@ -43,7 +43,7 @@ const HomeWhyChosee = () => {
     <motion.div 
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.5 }}
       transition={{ duration: 0.5 }}
       className="w-full max-w-[1200px] mx-auto flex flex-col items-center  relative overflow-hidden">
       <div className="py-4 text-center mb-6 text-gray-700 font-greatVibes title-home-section">

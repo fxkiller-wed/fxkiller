@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import HomeAvatar from "./Home-TestimonialAvatar";
 import testimonials from "@/data/DataTestimonials";
 
 const Testimonial: React.FC = () => {
@@ -11,7 +10,7 @@ const Testimonial: React.FC = () => {
 
   return (
     <div
-      className="px-6 flex flex-col justify-center items-center lg:rounded-2xl my-10 h-auto w-full xl:w-[1250px] py-5 relative z-10 xl:rounded-2xl"
+      className="px-6 flex flex-col justify-center items-center lg:rounded-2xl my-10 h-auto w-full xl:w-[1250px] pt-5 relative z-10 xl:rounded-2xl"
     > 
       <span className="font-urbanist font-semibold text-xl title-home-section text-center">Testimonials</span>
       <div className="py-4 text-center mb-6 text-gray-700 font-greatVibes title-home-section text-5xl lg:6xl xl:text-7xl">Testimonios de Nuestros Usuarios
@@ -69,7 +68,7 @@ const Testimonial: React.FC = () => {
           </button>
         )}
       </div>
-      <HomeAvatar/>
+      
     </div>
   );
 };
