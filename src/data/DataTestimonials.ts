@@ -1,4 +1,3 @@
-
 interface Testimonial {
   name: string;
   rating: number;

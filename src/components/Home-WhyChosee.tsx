@@ -45,7 +45,7 @@ const HomeWhyChosee = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5 }}
-      className="w-full max-w-[1200px] mx-auto flex flex-col items-center p-8 relative overflow-hidden">
+      className="w-full max-w-[1200px] mx-auto flex flex-col items-center  relative overflow-hidden">
       <div className="py-4 text-center mb-6 text-gray-700 font-greatVibes title-home-section">
         <span className="text-gray-200  title-home-section text-5xl lg:6xl xl:text-7xl">Porque Elegirnos  </span>
       </div>
@@ -59,7 +59,7 @@ const HomeWhyChosee = () => {
             return (
               <div
                 key={index}
-                className={`absolute transition-transform duration-500 ease-in-out p-4 w-[350px] lg:w-[400px] xl:w-[450px] h-56 btn-bg-black shadow-lg shadow-blue1 flex flex-col justify-center items-center text-gray-100 font-urbanist rounded-xl m-5
+                className={`absolute transition-transform duration-500 ease-in-out p-4 w-[350px] lg:w-[400px] xl:w-[450px] h-56 btn-why-chosee shadow-lg shadow-blue1 flex flex-col justify-center items-center text-gray-100 font-urbanist rounded-xl m-5
                   ${isCenter ? "z-10 scale-100" : "z-0 scale-75"}
                   ${position === -1 ? "-translate-x-72 rotate-6" : ""}
                   ${position === 1 ? "translate-x-72 -rotate-6" : ""}

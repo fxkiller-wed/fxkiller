@@ -60,7 +60,7 @@ export default {
         greentext: "linear-gradient(to right, black, #052e16, black)",
       },
       fontFamily: {
-        greatVibes: ["Great Vibes", "cursive"], //Titulos
+        greatVibes: ["Great Vibes", "cursive"],
         urbanist: ["Urbanist", "sans-serif"],
       },
       borderRadius: {
