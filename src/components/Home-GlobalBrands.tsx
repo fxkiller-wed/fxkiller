@@ -37,7 +37,7 @@ const GlobalBrands: React.FC = () => {
       className="bg-gradient-green h-auto w-full py-5 S flex flex-col items-center relative z-10 overflow-hidden  xl:text-[42px]"
     >
       <div className='font-urbanist contact-home-highlight font-semibold lg:text-xl'>We Transport Confidence</div>
-        <h2 className="text-4xl sm:text-3xl lg:text-4xl xl:text-6xl text-gray-200 font-greatVibes">
+        <h2 className="text-4xl sm:text-3xl lg:text-6xl xl:text-6xl text-gray-200 font-greatVibes">
           Confiamos en <span className="contact-home-highlight font-greatVibes py-4">Marcas Globales</span>
         </h2>
       {/* Logos con Marquee */}
@@ -67,7 +67,7 @@ const GlobalBrands: React.FC = () => {
 
       <div className="flex flex-col justify-center items-center px-4 ">
         <div 
-          className="text-4xl sm:text-3xl lg:text-4xl xl:text-6xl text-gray-100 flex gap-3  font-greatVibes"
+          className="text-4xl sm:text-3xl lg:text-6xl xl:text-6xl text-gray-100 flex gap-3  font-greatVibes"
         >
           <span className="contact-home-highlight font-greatVibes py-1">
             Programas
