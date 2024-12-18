@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { FaYoutube, FaInstagram, FaDiscord } from "react-icons/fa";
-import SelloFooter from "@/assets/img/footer-sello-FX-killers.png"
+import SelloFooter from "@/assets/img/footer-sello-FX-killers.png";
 
 const Footer = () => {
   const navIcons = [
@@ -27,10 +27,7 @@ const Footer = () => {
           className="flex flex-col justify-center items-center"
         >
           <div className="text-lg font-bold w-36 h-36 p-3 bg-black rounded-xl text-center">
-            <img
-            src={SelloFooter}
-            alt="Sello"
-            />
+            <img src={SelloFooter} alt="Sello" />
           </div>
           <div className="contact-home-highlight text-sm font-urbanist font-semibold pt-3">
             COOL COMPANY FOR COOL TRADERS
@@ -43,35 +40,27 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex flex-col gap-2 px-5 mt-6"
         >
-          <div className="font-greatVibes    contact-home-highlight text-4xl">Community</div>
-          <ScrollLink
-            to="home-welcome"
-            smooth={true}
-            duration={500}
-            offset={-70}
+          <div className="font-greatVibes    contact-home-highlight text-4xl pt-2">
+            Community
+          </div>
+          <RouterLink
+            to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Home
-          </ScrollLink>
-          <ScrollLink
-            to="testimonials-section"
-            smooth={true}
-            duration={500}
-            offset={-70}
+          </RouterLink>
+          <RouterLink
+            to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Testimonials
-          </ScrollLink>
-          <ScrollLink
-            to="why-chosee"
-            smooth={true}
-            duration={500}
-            offset={-70}
+          </RouterLink>
+          <RouterLink
+            to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Why Chosee
-          </ScrollLink>
-          
+          </RouterLink>
         </motion.div>
 
         <motion.div
@@ -80,14 +69,20 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col gap-2 mt-6"
         >
-          <div className="font-greatVibes    contact-home-highlight text-4xl">Company</div>
+          <div className="font-greatVibes    contact-home-highlight text-4xl pt-2">
+            Company
+          </div>
           <RouterLink
-          to="/suscriptions"
-          className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2">Subscription
+            to="/suscriptions"
+            className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
+          >
+            Subscription
           </RouterLink>
           <RouterLink
-          to="/contact"
-          className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2">Confirm Us
+            to="/contact"
+            className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
+          >
+            Confirm Us
           </RouterLink>
           <RouterLink
             to="/FAQs"
@@ -102,10 +97,13 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col gap-2 mt-6"
         >
-          <div className="font-greatVibes    contact-home-highlight text-center text-4xl">Contact</div>
+          <div className="font-greatVibes    contact-home-highlight text-center text-4xl pt-2">
+            Contact
+          </div>
           <RouterLink
             to="/contact"
-            className=" btn-about-us text-gray-50 px-8 py-2 font-urbanist rounded-full">
+            className=" btn-about-us text-gray-50 px-8 py-2 font-urbanist rounded-full"
+          >
             Confirm Us
           </RouterLink>
           <div className="flex justify-between gap-3">
@@ -135,9 +133,37 @@ const Footer = () => {
       >
         <div className="w-full h-[1px] btn-about-us flex justify-center items-center"></div>
         <div className="w-full text-center text-gray-200 flex justify-between items-center">
-          <div className="text-sm font-urbanist py-4 px-2">Terms and Conditions</div>
-          <div className="text-sm font-urbanist py-4 px-2">@2024 FX KILLERS TRADING HOUSE, All rights reserved.</div>
-          <div className="text-sm font-urbanist py-4 px-2">Privacy Policy</div>
+          <RouterLink
+            to="/terms"
+            className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
+          >
+            Terms and Conditions
+          </RouterLink>
+          <div className="text-sm font-urbanist py-4 px-2">
+            @2024 FX KILLERS TRADING HOUSE, All rights reserved.
+          </div>
+          <div className="text-sm font-urbanist py-4 px-2 flex gap-1">
+            Desarrollado por
+            <a
+              href="https://github.com/KeniBeck"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-beige2 hover:text-yellow-100"
+            >
+              {" "}
+              KeniBeck
+            </a>
+            &
+            <a
+              href="https://github.com/Yedixdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-beige2 hover:text-yellow-100"
+            >
+              {" "}
+              Yedixdev
+            </a>
+          </div>
         </div>
       </motion.div>
     </motion.div>
