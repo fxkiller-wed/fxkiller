@@ -111,7 +111,7 @@ return (
             viewport={{ once: false, amount: 0.3 }}
             className={`bg-[#0a0c18] text-white h-[520px] ${plan.width || "w-72"} rounded-xl  p-5 flex flex-col justify-between shadow-xl relative`}
             whileHover={{ 
-              scale: 1.05,
+              scale: 1.03,
               transition: { duration: 0.2 }
             }}
           >
@@ -136,13 +136,11 @@ return (
                 ))}
               </ul>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-l from-[#3f83f2] to-[#d7ad5e] text-black font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
+            <button
+              className="bg-gradient-to-l from-[#3f83f2] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2]  text-blue1 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
             >
               {plan.buttonText}
-            </motion.button>
+            </button>
           </motion.div>
         ))}
       </div>
