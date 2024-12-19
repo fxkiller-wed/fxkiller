@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
 import { FaYoutube, FaInstagram, FaDiscord } from "react-icons/fa";
-import SelloFooter from "@/assets/img/footer-sello-FX-killers.png";
+import SelloFooter from "@/assets/img/isologo.png";
 
 const Footer = () => {
   const navIcons = [
@@ -25,8 +25,8 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col justify-center items-center"
         >
-          <div className="text-lg font-bold w-36 h-36 p-3 bg-black rounded-xl text-center">
-            <img src={SelloFooter} alt="Sello" />
+          <div >
+            <img src={SelloFooter} alt="Sello" className="w-52 mb-3 "/>
           </div>
           <div className="contact-home-highlight text-sm font-urbanist font-semibold pt-3">
             COOL COMPANY FOR COOL TRADERS
@@ -141,25 +141,22 @@ const Footer = () => {
           <div className="text-sm font-urbanist py-4 px-2">
             @2024 FX KILLERS TRADING HOUSE, All rights reserved.
           </div>
-          <div className="text-sm font-urbanist py-4 px-2 flex gap-1">
-            Desarrollado por
+          <div className="text-sm font-urbanist  py-4 px-2 flex items-center flex-col lg:flex-row gap-1">
+            Desarrolladores
             <a
               href="https://github.com/KeniBeck"
               target="_blank"
               rel="noopener noreferrer"
               className="text-beige2 hover:text-yellow-100"
             >
-              {" "}
               KeniBeck
             </a>
-            &
             <a
               href="https://github.com/Yedixdev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-beige2 hover:text-yellow-100"
             >
-              {" "}
               Yedixdev
             </a>
           </div>

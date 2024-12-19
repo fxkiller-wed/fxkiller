@@ -1,7 +1,7 @@
 const Error = () => {
    return(
       <>
-         <div>Hola Error </div>
+         <div>Error 404</div>
       </>
    )
 }
