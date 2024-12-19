@@ -139,26 +139,10 @@ const Footer = () => {
             Terms and Conditions
           </RouterLink>
           <div className="text-sm font-urbanist py-4 px-2">
-            @2024 FX KILLERS TRADING HOUSE, All rights reserved.
+            © 2024 FX KILLERS TRADING HOUSE, All rights reserved.
           </div>
-          <div className="text-sm font-urbanist  py-4 px-2 flex items-center flex-col lg:flex-row gap-1">
-            Desarrolladores
-            <a
-              href="https://github.com/KeniBeck"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-beige2 hover:text-yellow-100"
-            >
-              KeniBeck
-            </a>
-            <a
-              href="https://github.com/Yedixdev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-beige2 hover:text-yellow-100"
-            >
-              Yedixdev
-            </a>
+          <div className="text-lg font-urbanist  flex items-center ">
+            From Mexico
           </div>
         </div>
       </motion.div>
@@ -166,4 +150,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer
