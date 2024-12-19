@@ -13,23 +13,29 @@ const FAQsAccordions: React.FC = () => {
   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
 
   const categories: { id: number; name: string }[] = [
-    { id: 0, name: "Visit FAQ center" },
-    { id: 1, name: "Visit our blog" },
-    { id: 2, name: "Ask for more help" },
+    { id: 0, name: "Membresía y Políticas de Pago" },
+    { id: 1, name: "Acceso y Contenido Exclusivo" },
+    { id: 2, name: "Requisitos y Experiencia" },
   ];
 
   const questions: { [key: number]: Question[] } = {
     0: [
-      { question: "¿Qué es el FAQ Center?", answer: "Es una plataforma donde puedes encontrar respuestas a preguntas frecuentes." },
-      { question: "¿Cómo puedo acceder al FAQ Center?", answer: "Puedes acceder desde nuestra página principal en el menú superior." },
+      { question: "¿Puedo ingresar a Premium VIP en cualquier momento?", answer: "No, el acceso a nuestra membresía Premium VIP está disponible únicamente en fechas específicas que se anuncian por email y redes sociales. Esto garantiza una experiencia exclusiva y organizada para los nuevos miembros." },
+      { question: "¿Mi membresía se renueva automáticamente?", answer: "Sí, nuestra membresía se renueva automáticamente al final de cada ciclo de facturación. Puedes desactivar esta opción desde tu cuenta antes de la fecha de cobro si prefieres manejarlo manualmente." },
+      { question: "¿Qué sucede si ya soy miembro VIP y compro el PDF?", answer: "Los días restantes de tu membresía serán compensados. Además, el PDF incluye 30 días adicionales gratis, que se sumarán al periodo vigente de tu membresía." },
+      // { question: "¿Qué opciones tengo si quiero pausar mi membresía temporalmente?", answer: "Actualmente, no contamos con una opción para pausar la membresía. Sin embargo, puedes cancelarla antes de la fecha de cobro y reactivarla cuando desees, manteniendo el acceso a nuestras ofertas y contenidos futuros." },
     ],
     1: [
-      { question: "¿Qué temas aborda el blog?", answer: "El blog aborda temas relacionados con nuestras soluciones y novedades." },
-      { question: "¿Cada cuánto se actualiza el blog?", answer: "El blog se actualiza semanalmente con contenido nuevo." },
+      { question: "¿Dónde puedo consultar los resultados pasados mensuales?", answer: "Los resultados mensuales están disponibles en nuestra sección #resultados en Discord. Allí encontrarás un desglose detallado con estadísticas de rendimiento y análisis." },
+      { question: "¿Qué sesiones operativas cubren en su comunidad?", answer: "Nos enfocamos en las sesiones de mercado de Nueva York y, en ocasiones, las de Londres, para garantizar las mejores oportunidades de liquidez y análisis en tiempo real." },
+      { question: "¿Cómo puedo acceder a las grabaciones de las sesiones en vivo?", answer: "Todas las sesiones se graban y se suben al portal de membresía en un plazo de 24 horas, permitiéndote acceder a ellas cuando lo necesites." },
+      // { question: "¿El contenido educativo incluye mentorías personalizadas?", answer: "Sí, como miembro Premium tienes acceso a mentorías personalizadas con nuestros expertos. Estas sesiones están diseñadas para ayudarte a resolver dudas específicas y optimizar tus estrategias de trading." },
     ],
     2: [
-      { question: "¿Cómo puedo solicitar ayuda?", answer: "Puedes contactarnos a través de nuestro formulario de contacto." },
-      { question: "¿Qué tipo de ayuda brindan?", answer: "Brindamos soporte técnico y asesoramiento personalizado." },
+      { question: "¿Cuánta experiencia necesito para aprovechar el PDF?", answer: "El PDF está diseñado para traders con nivel intermedio a avanzado. Es ideal si ya tienes conocimientos sólidos en análisis técnico y estrategias de gestión de riesgos." },
+      { question: "¿Es la membresía adecuada para principiantes?", answer: "Aunque ofrecemos contenido avanzado, los principiantes con conocimientos básicos pueden beneficiarse. Recomendamos familiarizarte con conceptos fundamentales antes de unirte." },
+      { question: "¿Qué habilidades puedo desarrollar con la membresía?", answer: "Podrás aprender a interpretar gráficos, crear estrategias personalizadas, gestionar riesgos y fortalecer tu psicología del trading para tomar decisiones acertadas." },
+      // { question: "¿Qué beneficios ofrece la comunidad a los miembros?", answer: "Nuestra comunidad proporciona un entorno colaborativo donde puedes interactuar con traders de distintos niveles, compartir estrategias, recibir feedback en tiempo real y acceder a recursos exclusivos, como análisis diarios y sesiones grupales para resolver dudas específicas." },
     ],
   };
 
@@ -98,7 +104,7 @@ const FAQsAccordions: React.FC = () => {
                 className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100 shadow-md shadow-gray-900 "
               >
                 <button
-                  className="w-full flex justify-between items-center font-poppins text-md text-left p-4"
+                  className="w-full flex justify-between items-center font-urbanist text-md text-left p-4"
                   onClick={() => toggleAccordion(index)}
                 >
                   {item.question}
@@ -112,7 +118,7 @@ const FAQsAccordions: React.FC = () => {
                 </button>
                 {selectedQuestion === index && (
                   <motion.div
-                    className="px-4 py-2 font-poppins text-gray-300"
+                    className="px-4 py-2 font-urbanist text-gray-300"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
