@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { subscribe } from "@/services/subscription";
 import Photo from "@/assets/img/about-me-photo.png";
@@ -35,6 +35,15 @@ const AboutMe = () => {
       setIsSubmitting(false); 
     }
   };
+
+  useEffect(() => {
+      if (isSubscribed) {
+        const timer = setTimeout(() => {
+          setIsSubscribed(false);
+        }, 3000);
+        return () => clearTimeout(timer);
+      }
+    }, [isSubscribed]);
 
   return (
     <motion.div
@@ -172,10 +181,9 @@ const AboutMe = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-5 p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl flex items-center"
+          className="mt-5 p-4 bg-green2 border border-beige1 rounded-xl flex items-center"
         >
-          <span className="mr-2 text-2xl">🎉</span>
-          <span className="font-semibold">{message}</span>
+          <span className="font-semibold contact-home-highlight text-lg font-urbanist text-center">{message}</span>
         </motion.div>
       ) : (
         <motion.div

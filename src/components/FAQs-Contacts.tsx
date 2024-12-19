@@ -15,7 +15,7 @@ const FAQsContacts = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!firstName || !lastName || !email || !message) {
+    if (!firstName || !email || !message) {
       setFormMessage("Por favor, completa todos los campos.");
       return;
     }
@@ -40,6 +40,11 @@ const FAQsContacts = () => {
         setEmail("");
         setMessage("");
         setIsSubscribed(true); 
+
+        setTimeout(() => {
+          setFormMessage(""); 
+          setIsSubscribed(false); 
+        }, 3000);
       } else {
         setFormMessage(`Hubo un error: ${response.message}`);
       }
@@ -71,10 +76,9 @@ const FAQsContacts = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mt-5 p-4 h-[200px] bg-green-100 border border-green-400 text-green-700 rounded-xl flex items-center justify-center"
+              className="relative p-3 sm:p-4 bg-blue1 rounded-xl flex justify-center shadow-lg shadow-gray-600"
             >
-              <span className="mr-2 text-2xl">🎉</span>
-              <span className="font-semibold">{formMessage}</span>
+              <span className="text-sm sm:text-lg font-semibold font-urbanist contact-home-highlight text-center">{formMessage}</span>
             </motion.div>
           </div>
         ) : (

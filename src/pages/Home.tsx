@@ -5,8 +5,11 @@ import Testimonial from "@/components/Home-Testimonial"
 import HomeWhyChosee from "@/components/Home-WhyChosee"
 import Footer from "@/components/Footer"
 import HomeTrustpilot from "@/components/Home-Trustpilot"
+import Header from "@/components/Header"
 const Home = () => {
    return(
+      <>
+      <Header/>
       <div className="min-w-full bg-gray-100 flex flex-col justify-center pt-24 items-center min-h-screen">
          <Welcome/>
          <GlobalBrands/>
@@ -16,6 +19,7 @@ const Home = () => {
          <AboutMe/>
          <Footer/>
       </div>
+      </>
    )
 }
 

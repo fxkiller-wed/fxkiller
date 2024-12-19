@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { subscribe } from "@/services/subscription"; 
 
 const Welcome = () => {
@@ -30,6 +30,15 @@ const Welcome = () => {
       setIsSubmitting(false); 
     }
   };
+
+  useEffect(() => {
+    if (isSubscribed) {
+      const timer = setTimeout(() => {
+        setIsSubscribed(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSubscribed]);
 
   return (
     <div 
@@ -66,15 +75,14 @@ const Welcome = () => {
 
         <div className="w-full max-w-2xl mx-auto px-2 sm:px-4">
           {isSubscribed ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative p-3 sm:p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl flex items-center justify-center gap-2"
-            >
-              <span className="text-xl sm:text-2xl">🎉</span>
-              <span className="font-semibold text-sm sm:text-base">{message}</span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative p-3 sm:p-4 bg-blue1 rounded-xl flex justify-center shadow-lg shadow-gray-600"
+              >
+                <span className="text-sm sm:text-lg font-semibold font-urbanist contact-home-highlight text-center">{message}</span>
+              </motion.div>
           ) : (
             <motion.form
               onSubmit={handleSubmit}

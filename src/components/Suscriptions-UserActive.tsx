@@ -14,12 +14,12 @@ const UserActive = () => {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="xl:w-[1250px] h-auto mx-auto mt-10 p-5 lg:rounded-2xl flex flex-col py-10 justify-center items-center"
+      className="xl:w-[1250px] h-auto mx-auto  lg:rounded-2xl flex flex-col  justify-center items-center"
     >
-      <div className="text-6xl font-greatVibes text-center">
-        <span className="title-home-section">Nuestros Usuarios Activos</span>
+      <div className="text-7xl font-greatVibes text-center pt-8 ">
+        <span className="title-home-section pt-5">Nuestros Usuarios Activos</span>
       </div>
-      <p className="text-blue1 font-urbanist mt-5 text-center">Usamos cada comentario e interacción con el usuario para saber como impactar, mejorar y crecer con la comunidad</p>
+      <p className="text-blue1 font-urbanist mt-5 text-center text-lg">Usamos cada comentario e interacción con el usuario para saber como impactar, mejorar y crecer con la comunidad</p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
         {UserMembers.map((item, index) => (
           <motion.div
