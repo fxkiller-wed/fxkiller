@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="w-full fixed bg-blue1 h-16 flex justify-between items-center px-8 shadow- shadow-gray-900 z-50"
+      className="w-full fixed bg-green1 h-16 flex justify-between items-center px-8 shadow- shadow-gray-900 z-50"
       initial={{ opacity: 0, y: -30 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8 }} 

@@ -66,23 +66,21 @@ const PlansPay: React.FC = () => {
   ];
 
   const cardVariants = {
-    hidden: (index: number) => ({
+    hidden: {
       opacity: 0,
-      x: index === 1 ? 0 : index === 0 ? 100 : -100,
-      y: index === 1 ? 100 : 0,
-    }),
-    visible: (index: number) => ({
+      y: 50,
+    },
+    visible: {
       opacity: 1,
-      x: 0,
       y: 0,
       transition: {
         duration: 0.6,
-        delay: index === 1 ? 0 : 1,
         ease: "easeOut"
       }
-    }),
+    },
   };
-return (
+
+  return (
     <motion.div
       className="xl:w-[1250px] bg-blue1 h-auto mx-auto p-3 lg:rounded-2xl flex flex-col py-5 justify-center items-center"
       initial={{ opacity: 0, y: -50 }}
@@ -93,9 +91,8 @@ return (
       <span className="font-urbanist font-semibold contact-home-highlight text-xl">
         Suscriptions
       </span>
-      <div className="text-6xl font-greatVibes contact-home-highlight text-center p-3">
-        <span className="contact-home-highlight">Planes perfectos </span>
-        <span className="text-gray-200">  para tus necesidades:</span>
+      <div className="text-beige1 text-6xl font-greatVibes text-center p-3">
+        Planes perfectos para tus necesidades:
       </div>
       <div className="font-urbanist text-gray-200 text-center text-lg">
         Ofrecemos una gama de planes de precios flexibles diseñados para adaptarse a traders de todos los tamaños.
@@ -109,14 +106,13 @@ return (
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className={`bg-[#0a0c18] text-white h-[520px] ${plan.width || "w-72"} rounded-xl  p-5 flex flex-col justify-between shadow-xl relative`}
             whileHover={{ 
               scale: 1.03,
               transition: { duration: 0.2 }
             }}
+            className={`bg-[#0a0c18] text-white h-[520px] ${plan.width || "w-72"} rounded-xl p-5 flex flex-col justify-between shadow-xl relative`}
           >
-            <div className="absolute inset-0">
-            </div>
+            <div className="absolute inset-0"></div>
             <div className="relative z-10">
               <h2 className="text-2xl font-bold contact-home-highlight">{plan.title}</h2>
               <p className="text-4xl font-bold mt-3">${plan.price} <span className="text-sm">{plan.period}</span></p>
@@ -125,9 +121,6 @@ return (
                 {plan.features.map((feature, featureIndex) => (
                   <motion.li
                     key={featureIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * featureIndex }}
                     className="flex items-center gap-2"
                   >
                     <FaCheck className="text-beige2 text-xl"/>
@@ -137,7 +130,7 @@ return (
               </ul>
             </div>
             <button
-              className="bg-gradient-to-l from-[#3f83f2] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2]  text-blue1 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
+              className="bg-gradient-to-l from-[#2e5ca7] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2] text-gray-200 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
             >
               {plan.buttonText}
             </button>

@@ -2,7 +2,7 @@ const InfoTerms = () => {
   return (
     <>
       <div className="flex flex-col justify-center items-center gap-3 mx-32 text-xl">
-        <div className="font-greatVibes title-home-section text-7xl pt-2">
+        <div className="font-greatVibes text-beige1 text-7xl pt-2">
           Terms & Conditions
         </div>
         <div className="font-urbanist flex flex-col gap-6">

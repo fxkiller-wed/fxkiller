@@ -9,7 +9,7 @@ export default {
         green2: "#012b20",
         gray1: "#EAEAEA",
         gray2: "#333333",
-        beige1: "#b69f57",
+        beige1: "#b79f57",
         beige2: "#efd073",
         black1: "	#1a1a1a",
         blue1: "#081628",

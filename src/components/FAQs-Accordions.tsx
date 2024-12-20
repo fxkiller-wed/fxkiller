@@ -23,19 +23,16 @@ const FAQsAccordions: React.FC = () => {
       { question: "¿Puedo ingresar a Premium VIP en cualquier momento?", answer: "No, el acceso a nuestra membresía Premium VIP está disponible únicamente en fechas específicas que se anuncian por email y redes sociales. Esto garantiza una experiencia exclusiva y organizada para los nuevos miembros." },
       { question: "¿Mi membresía se renueva automáticamente?", answer: "Sí, nuestra membresía se renueva automáticamente al final de cada ciclo de facturación. Puedes desactivar esta opción desde tu cuenta antes de la fecha de cobro si prefieres manejarlo manualmente." },
       { question: "¿Qué sucede si ya soy miembro VIP y compro el PDF?", answer: "Los días restantes de tu membresía serán compensados. Además, el PDF incluye 30 días adicionales gratis, que se sumarán al periodo vigente de tu membresía." },
-      // { question: "¿Qué opciones tengo si quiero pausar mi membresía temporalmente?", answer: "Actualmente, no contamos con una opción para pausar la membresía. Sin embargo, puedes cancelarla antes de la fecha de cobro y reactivarla cuando desees, manteniendo el acceso a nuestras ofertas y contenidos futuros." },
     ],
     1: [
       { question: "¿Dónde puedo consultar los resultados pasados mensuales?", answer: "Los resultados mensuales están disponibles en nuestra sección #resultados en Discord. Allí encontrarás un desglose detallado con estadísticas de rendimiento y análisis." },
       { question: "¿Qué sesiones operativas cubren en su comunidad?", answer: "Nos enfocamos en las sesiones de mercado de Nueva York y, en ocasiones, las de Londres, para garantizar las mejores oportunidades de liquidez y análisis en tiempo real." },
       { question: "¿Cómo puedo acceder a las grabaciones de las sesiones en vivo?", answer: "Todas las sesiones se graban y se suben al portal de membresía en un plazo de 24 horas, permitiéndote acceder a ellas cuando lo necesites." },
-      // { question: "¿El contenido educativo incluye mentorías personalizadas?", answer: "Sí, como miembro Premium tienes acceso a mentorías personalizadas con nuestros expertos. Estas sesiones están diseñadas para ayudarte a resolver dudas específicas y optimizar tus estrategias de trading." },
     ],
     2: [
       { question: "¿Cuánta experiencia necesito para aprovechar el PDF?", answer: "El PDF está diseñado para traders con nivel intermedio a avanzado. Es ideal si ya tienes conocimientos sólidos en análisis técnico y estrategias de gestión de riesgos." },
       { question: "¿Es la membresía adecuada para principiantes?", answer: "Aunque ofrecemos contenido avanzado, los principiantes con conocimientos básicos pueden beneficiarse. Recomendamos familiarizarte con conceptos fundamentales antes de unirte." },
       { question: "¿Qué habilidades puedo desarrollar con la membresía?", answer: "Podrás aprender a interpretar gráficos, crear estrategias personalizadas, gestionar riesgos y fortalecer tu psicología del trading para tomar decisiones acertadas." },
-      // { question: "¿Qué beneficios ofrece la comunidad a los miembros?", answer: "Nuestra comunidad proporciona un entorno colaborativo donde puedes interactuar con traders de distintos niveles, compartir estrategias, recibir feedback en tiempo real y acceder a recursos exclusivos, como análisis diarios y sesiones grupales para resolver dudas específicas." },
     ],
   };
 
