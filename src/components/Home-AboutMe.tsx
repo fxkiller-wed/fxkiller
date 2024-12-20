@@ -79,7 +79,7 @@ const AboutMe = () => {
 
         {/* Información */}
         <motion.div
-          className="w-full lg:w-[700px] bg-green1 opacity-90 relative z-10 rounded-xl p-4 sm:p-6"
+          className="w-full lg:w-[700px] bg-green1 opacity-90 relative z-10 xl:rounded-xl p-4 sm:p-6 "
           initial={{ opacity: 0, scale: 0.3 }}
           animate={{ x: 0 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
