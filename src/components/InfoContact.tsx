@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Photo from "@/assets/img/about-me-photo.png";
@@ -45,6 +45,10 @@ const InfoContact = () => {
     { icon: <FaYoutube />, name: "Youtube", url: "https://www.youtube.com/@babyivanfx" },
     { icon: <SiBento />, name: "Bento", url: "https://bento.me/babyivanfx" },
   ];
+
+  const handleNetworkClick = (url: string) => {
+    window.location.href = url;
+  };
 
   return (
     <motion.div
@@ -146,7 +150,7 @@ const InfoContact = () => {
               key={index}
               className="w-full max-w-md h-16 bg-beige1 rounded-xl flex items-center px-4 hover:shadow-lg cursor-pointer transition-all"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              onClick={() => handleNetworkClick(network.url)}
             >
               <div className="text-4xl text-gray-800 mr-4">{network.icon}</div>
               <div className="text-lg text-gray-800">Encuentrame en {network.name}</div>

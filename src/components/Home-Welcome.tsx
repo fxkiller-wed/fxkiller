@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import { subscribe } from "@/services/subscription"; 
+import { subscribe } from "@/services/subscription";
+import Logo from "@/assets/img/isotipo-FX-killers.png"
 
 const Welcome = () => {
-  const [email, setEmail] = useState<string>("");  
-  const [message, setMessage] = useState<string>("");  
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);  
-  const [isSubscribed, setIsSubscribed] = useState<boolean>(false); 
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,12 +15,12 @@ const Welcome = () => {
       setMessage("Por favor, ingresa tu correo.");
       return;
     }
-    setIsSubmitting(true); 
+    setIsSubmitting(true);
     try {
       const response = await subscribe(email);
       if (response.success) {
         setMessage("¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.");
-        setEmail(""); 
+        setEmail("");
         setIsSubscribed(true);
       } else {
         setMessage(`Hubo un error: ${response.message}`);
@@ -27,7 +28,7 @@ const Welcome = () => {
     } catch (error) {
       setMessage("Hubo un problema al enviar tu suscripción.");
     } finally {
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
     }
   };
 
@@ -35,58 +36,58 @@ const Welcome = () => {
     if (isSubscribed) {
       const timer = setTimeout(() => {
         setIsSubscribed(false);
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [isSubscribed]);
 
   return (
-    <div 
-      id="home-welcome"
-      className="w-full flex items-center justify-center relative mb-16">
+    <div id="home-welcome" className="w-full flex items-center justify-center relative">
       <motion.div
-        className="w-[90%] sm:w-[85%] md:w-[80%] max-w-[1000px] rounded-xl flex flex-col items-center gap-4 p-4 sm:p-6 md:p-8"
-        initial={{ opacity: 0, y: 50 }}  
-        animate={{ opacity: 1, y: 0 }}   
-        transition={{ duration: 1, ease: "easeOut" }}  
+        className="w-[90%] sm:w-[85%] md:w-[80%] max-w-[900px] rounded-xl relative"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
-        <motion.div
-          className="w-full flex justify-center scale-90 sm:scale-100"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          
-        </motion.div>
+        <div className="w-full flex justify-center">
+          <img src={Logo} alt="Logo" className="w-36 lg:w-72 absolute z-10"/>
+        </div>
+        {/* Video Container */}
+        <div className="mt-10 lg:mt-20 relative w-full aspect-video rounded-xl shadow-lg shadow-gray-950 p-1 btn-bg-black">
+          <iframe
+            className="w-full h-full rounded-xl"
+            src="https://www.youtube.com/embed/NyiDPn4ZO0I"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
+        </div>
 
-        <motion.div
-          className="flex flex-col items-center gap-2 sm:gap-4  sm:mt-0"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <h1 className="title-home-section font-greatVibes  text-7xl md:text-[200px]  xl:text-[200px] text-center pt-5">
-            Fx Killers
-          </h1>
-          <p className="font-urbanist text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-blue1 relative z-10">
-            TRADE <span className="text-xl sm:text-2xl">TRUST</span> TRANSFORM
-          </p>
-        </motion.div>
-
-        <div className="w-full max-w-2xl mx-auto px-2 sm:px-4">
+        {/* Form Section */}
+        <div className="mt-6 lg:pb-4 sm:absolute sm:bottom-0 sm:left-0 sm:w-full sm:bg-gradient-to-t flex flex-col sm:from-black/100 sm:to-transparent sm:rounded-xl">
+          <motion.h2
+            className="text-base sm:hidden font-semibold text-center contact-home-highlight font-urbanist mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Suscribete para más información
+          </motion.h2>
           {isSubscribed ? (
+            <div className="w-full flex justify-center ">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="relative p-3 sm:p-4 bg-blue1 rounded-xl flex justify-center shadow-lg shadow-gray-600"
+                className="w-6500px] p-4 flex btn-why-chosee rounded-xl shadow-lg shadow-black text-center border-2 border-beige1"
               >
-                <span className="text-sm sm:text-lg font-semibold font-urbanist contact-home-highlight text-center">{message}</span>
+                <span className="text-sm sm:text-lg text-center font-urbanist text-white">{message}</span>
               </motion.div>
+            </div>
           ) : (
             <motion.form
               onSubmit={handleSubmit}
-              className="relative flex gap-2 sm:gap-3 justify-center bg-blue1 p-3 sm:p-4 rounded-2xl shadow-md z-0"
+              className="flex sm:flex-row items-center gap-3 btn-why-chosee p-2 rounded-xl shadow-md w-full max-w-xl mx-auto bg-black/40 sm:bg-transparent"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -97,14 +98,14 @@ const Welcome = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="p-2 sm:p-3 w-full font-urbanist rounded-xl text-gray-100 bg-transparent focus:outline-none focus:ring-2 focus:ring-beige1 focus:border-transparent placeholder-beige2 transition duration-300 relative z-10 text-sm sm:text-base"
+                className="p-2 sm:p-3 flex-grow font-urbanist rounded-xl text-gray-100 bg-transparent focus:outline-none focus:ring-2 focus:ring-beige1 focus:border-transparent placeholder-beige2 transition duration-300 text-sm sm:text-base"
               />
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="contact-btn-form-home whitespace-nowrap px-4 sm:px-6 py-2 sm:py-3 rounded-xl transition duration-300 bg-yellow1 text-white hover:shadow-md hover:shadow-gray-950 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed text-xs"
+                className="bg-beige1 hover:bg-beige2 px-6 py-3 rounded-xl transition duration-300 text-base text-gray-100 hover:text-black hover:shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Enviando...' : 'Suscríbete'}
+                {isSubmitting ? "Enviando..." : "Suscríbete"}
               </button>
             </motion.form>
           )}

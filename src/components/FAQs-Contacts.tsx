@@ -63,8 +63,7 @@ const FAQsContacts = () => {
       transition={{ duration: 0.8 }}
       className="p-6 flex flex-col justify-center items-center lg:rounded-2xl my-5 h-auto w-full xl:w-[1250px] py-5 px-10 relative z-10 xl:rounded-2xl"
     >
-      <div className="font-urbanist text-xl title-home-section font-bold">Contact Us</div>
-      <div className="font-greatVibes title-home-section text-6xl text-center pt-2">Contactate con Nosotros</div>
+      <div className="font-greatVibes text-blue1 text-6xl text-center pt-2">Contactate con Nosotros</div>
       <div className="flex flex-col font-urbanist text-lg text-blue-1 text-center mb-5 font-medium">
         <div>Estamos aquí para ayudarte en todo momento.</div>
         <div>Déjanos un mensaje y nos pondremos en contacto contigo pronto.</div>

@@ -17,7 +17,7 @@ const UserActive = () => {
       className="xl:w-[1250px] h-auto mx-auto  lg:rounded-2xl flex flex-col  justify-center items-center"
     >
       <div className="text-7xl font-greatVibes text-center pt-8 ">
-        <span className="title-home-section pt-5">Nuestros Usuarios Activos</span>
+        <span className="text-blue1 pt-5">Nuestros Usuarios Activos</span>
       </div>
       <p className="text-blue1 font-urbanist mt-5 text-center text-lg">Usamos cada comentario e interacción con el usuario para saber como impactar, mejorar y crecer con la comunidad</p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
