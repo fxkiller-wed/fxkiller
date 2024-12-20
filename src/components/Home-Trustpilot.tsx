@@ -8,9 +8,8 @@ const HomeTrustpilot = () => {
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="h-auto w-full lg:w-[600px] flex flex-col relative z-10 overflow-hidden xl:text-[42px]  justify-center items-center py bg-blue1 lg:rounded-2xl shadow-lg py-5 mb-5 lg:border-2 lg:border-beige1"
+      className="h-auto w-full lg:w-[600px] flex flex-col relative z-10 overflow-hidden xl:text-[42px]  justify-center items-center py bg-[#0a0c18] lg:rounded-2xl shadow-lg py-5 mb-5 lg:border-2 lg:border-beige1"
     >
-      <div></div>
       <img
         src={TrustpilotLogo}
         alt="Trustpilot Logo"

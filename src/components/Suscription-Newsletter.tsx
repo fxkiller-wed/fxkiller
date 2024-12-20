@@ -55,8 +55,7 @@ const Newsletter = () => {
         transition={{ delay: 0.5, duration: 0.8, ease: "easeOut"}}
         className="flex flex-col justify-center items-center gap-2"
       >
-        <div className="relative z-10 font-poppins text-xl font-semibold title-home-section">Newsletter</div>
-        <div className="text-6xl sm:text-7xl font-greatVibes  text-blue1 text-center title-home-section py-3 relative z-10">
+        <div className="text-6xl sm:text-7xl font-greatVibes  text-center text-blue1 py-3 relative z-10">
           Mantente en contacto
         </div>
         <div className="font-urbanist text-blue1 text-center text-lg mb-3">Suscribete a nuestro comunidad para que recibas las últimas actualizaciones y ofertas exclusivas.</div>
