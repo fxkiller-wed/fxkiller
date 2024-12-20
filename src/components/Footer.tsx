@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
 import { FaYoutube, FaInstagram, FaDiscord } from "react-icons/fa";
 import SelloFooter from "@/assets/img/isologo.png";
+import Tagline from "@/assets/img/tagline-horizontal-FX-killers.png"
 
 const Footer = () => {
   const navIcons = [
@@ -25,11 +26,9 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col justify-center items-center"
         >
-          <div >
+          <div className="flex flex-col items-center gap-4" >
             <img src={SelloFooter} alt="Sello" className="w-52 mb-3 "/>
-          </div>
-          <div className="contact-home-highlight text-sm font-urbanist font-semibold pt-3">
-            COOL COMPANY FOR COOL TRADERS
+            <img src={Tagline} alt="Sello" className="w-80 mb-3 "/>
           </div>
         </motion.div>
 
