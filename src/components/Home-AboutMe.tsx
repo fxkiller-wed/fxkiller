@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { subscribe } from "@/services/subscription";
-import Photo from "@/assets/img/about-me-photo.png";
+import Photo from "@/assets/img/about-me-photo.jpg";
 
 const AboutMe = () => {
   const [email, setEmail] = useState<string>("");
@@ -68,7 +68,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-60 h-60 btn-why-chosee"
+          className="relative w-80 h-80 btn-why-chosee" // Ajuste del tamaño de la foto
         >
           <img
             src={Photo}
@@ -104,11 +104,15 @@ const AboutMe = () => {
             className="text-gray-50 font-poppins font-light mt-4 text-sm sm:text-base"
           >
             <p>
-              Me chamo Washington Henrique Fernandes de Sousa, mas pode me chamar apenas de Henrique. Prazer!
+              Babyivanfx, cuyo nombre real es Iván Vargas, es un trader, emprendedor, mentor de Forex, y fundador de 4 empresas a sus 29 años, entre ellas FX KILLERS. Nacido en México, algunos aspectos clave sobre él:
             </p>
-            <p className="mt-2">
-              Há mais de 2 anos desenvolvendo e programando interfaces com JavaScript, React JS e Typescript.
-            </p>
+            <ul className="list-disc list-inside">
+              <li>Más de 5 años de experiencia en el mercado Forex.</li>
+              <li>Ofrece recursos como un diario de trading, seguimiento de hábitos y bootcamps.</li>
+              <li>Autor de "The Best ICT Guide 2.0" con estrategias y consejos para traders.</li>
+              <li>Se centra en el trading sostenible y consistente, con análisis y ejecución en vivo.</li>
+              <li>Ha manejado más de 2 millones de dólares y retirado grandes sumas en varias plataformas.</li>
+            </ul>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -119,7 +123,7 @@ const AboutMe = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col justify-center items-center mt-5 gap-4 bg-[#EEEBd5] p-6 lg:rounded-xl w-full lg:w-[950px]"
+        className="flex flex-col justify-center items-center mt-5 gap-4 bg-[#EEEBd5] p-6 lg:rounded-xl w-full lg:w-[1030px]"
       >
         <div className="relative z-10 font-poppins text-xl font-semibold text-green2">Mantente en contacto</div>
         
