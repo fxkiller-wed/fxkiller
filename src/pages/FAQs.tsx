@@ -20,7 +20,7 @@ const FAQ = () => {
          {loading ? (
          <Spinner />
          ) : (
-            <div className="min-w-full bg-gray-50 flex flex-col justify-center pt-24 items-center min-h-screen">
+            <div className="min-w-full bg-gray-50 flex flex-col justify-center pt-20 items-center min-h-screen">
                <FAQsAccordions/>
                <FAQsContacts/>
                <Footer/>
