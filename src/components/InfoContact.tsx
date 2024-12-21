@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Photo from "@/assets/img/about-me-photo.png";
+import Photo from "@/assets/img/about-me-photo.jpg";
 import IconContact from "@/assets/img/icon-contact.png";
 import { subscribe } from "@/services/subscription";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
