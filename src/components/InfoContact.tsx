@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Photo from "@/assets/img/about-me-photo.png";
+import Photo from "@/assets/img/about-me-photo.jpg";
 import IconContact from "@/assets/img/icon-contact.png";
 import { subscribe } from "@/services/subscription";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
@@ -99,7 +99,7 @@ const InfoContact = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Newsletter
+          Envianos tu correo
         </motion.div>
         {isSubscribed ? (
           <motion.div
@@ -143,7 +143,7 @@ const InfoContact = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="text-2xl font-urbanist text-center font-semibold contact-home-highlight">
-            All my networks
+            Todas nuestras redes sociales
           </div>
           {Networks.map((network, index) => (
             <motion.div

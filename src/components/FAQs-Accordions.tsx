@@ -48,16 +48,15 @@ const FAQsAccordions: React.FC = () => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5 }}
     >
-      <span className="font-urbanist font-semibold text-lg md:text-xl contact-home-highlight text-center">
-        Questions and Answers
+      <span className="text-4xl md:text-7xl pb-5 mb-3 flex gap-5 flex-row md:flex-row items-center md:items-start font-greatVibes text-center md:text-left">
+        <div className="text-gray-200">Preguntas</div>
+        <div className="text-beige1">Frecuentes</div>
       </span>
-      <div className="w-full flex flex-col md:flex-row mt-5 justify-center gap-10">
+
+      <div className="w-full flex flex-col md:flex-row justify-center gap-10">
+        {/* Categorías */}
         <div className="flex justify-center flex-col">
-          <div className="text-3xl md:text-7xl  pb-5 mb-3 flex flex-col md:flex-row items-center md:items-start font-greatVibes contact-home-highlight text-center md:text-left">
-            <div className="text-gray-200">Frequently Asked</div>
-            <div className="contact-home-highlight">Questions</div>
-          </div>
-          <div className="flex flex-col gap-4 w-full md:w-[450px]">
+          <div className="flex flex-col gap-3 lg:gap-8 w-full md:w-[450px]">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -75,13 +74,13 @@ const FAQsAccordions: React.FC = () => {
         </div>
 
         <motion.div
-          className="flex flex-col gap-6 w-full md:w-[600px]"
+          className="flex flex-col gap-3 w-full md:w-[600px]"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           {selectedCategory === null ? (
-            <div className="w-full md:w-[600px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-2 xl:mt-6 lg:mt-6">
+            <div className="w-full md:w-[500px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-1">
               <iframe
                 className="w-full aspect-video rounded-xl btn-bg-black shadow-lg shadow-gray-950"
                 src="https://www.youtube.com/embed/NyiDPn4ZO0I"
@@ -92,7 +91,7 @@ const FAQsAccordions: React.FC = () => {
             </div>
           ) : selectedCategory !== null && questions[selectedCategory]?.length === 0 ? (
             <div className="text-gray-400 text-lg text-center">
-              There are no questions available for this category.
+              No hay preguntas disponibles para esta categoría.
             </div>
           ) : (
             questions[selectedCategory]?.map((item, index) => (
@@ -132,9 +131,9 @@ const FAQsAccordions: React.FC = () => {
           {selectedCategory !== null && (
             <button
               onClick={() => setSelectedCategory(null)}
-              className="flex items-center justify-center gap-2 font-poppins font-semibold text-lg p-2 rounded-xl shadow-lg bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100  shadow-gray-900 transition duration-300 "
+              className="flex items-center justify-center gap-2 font-poppins font-semibold text-lg p-2 rounded-xl shadow-lg bg-gradient-to-r from-[#15234e] to-[#040915] text-gray-100 shadow-gray-900 transition duration-300"
             >
-              <div className="contact-home-highlight hover:text-gray-50">Watch Full Video</div>
+              <div className="contact-home-highlight hover:text-gray-50">Ver video de Presentación</div>
             </button>
           )}
         </motion.div>

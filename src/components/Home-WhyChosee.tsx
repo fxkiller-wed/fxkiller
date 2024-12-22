@@ -1,40 +1,24 @@
 import { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const HomeWhyChosee = () => {
   const infoItems = [
     { 
-      title: "Enseñanza Clara y Aterrizada", 
-      description: "Soy Iván, y me especializo en desglosar conceptos complejos de trading, brindándote explicaciones claras y accesibles para que puedas dominar el mercado sin complicaciones." 
+      title: "Los mejores en la Industria", 
+      description: "Fundadores de la nueva era en Trading General #1 Primera comunidad de Forex desde 2020 Formación desde 0 dentro del server Asistencia 24/7"
     },
     { 
-      title: "Preparación para la Realidad del Mercado", 
-      description: "Te preparé para lo que realmente importa en el trading. No solo te enseñaré las estrategias, sino también cómo afrontar los desafíos reales y obtener ganancias sostenibles." 
+      title: "Innovaciones constantes", 
+      description: "Adictos a el crecimiento desde el día UNO, ya no solo en CFDs ahora tambien en lado Futuros Crear Traders con fortaleza, vitalidad y capacidad de formarse como traders 3,4,5,6 cifras y como personas de auto crecimiento personal." 
     },
     { 
-      title: "Una Comunidad de Apoyo", 
-      description: "Al unirte a mi mentoría, entrarás en una comunidad de traders activos, con personas motivadas que comparten conocimientos, ideas y crecen juntas en el proceso." 
-    },
-    { 
-      title: "Actualización Continua", 
-      description: "El mercado cambia constantemente. Mi compromiso es mantenerte actualizado con las últimas tendencias y estrategias para que siempre estés un paso adelante." 
-    },
-    { 
-      title: "Adaptabilidad", 
-      description: "El mercado es dinámico y en constante evolución. Te enseñaré a adaptarte a esos cambios, para que puedas operar con confianza y flexibilidad en cualquier situación." 
-    },
-    { 
-      title: "Capacitación Regular", 
-      description: "No solo se trata de sesiones puntuales. Ofrezco capacitaciones regulares para que siempre estés al tanto de nuevas técnicas, herramientas y tendencias del mercado." 
-    },
-    { 
-      title: "Soporte Personalizado", 
-      description: "Mi enfoque es totalmente personalizado. Siempre estaré disponible para resolver tus dudas y apoyarte en cada paso del camino, asegurándome de que progreses a tu propio ritmo." 
+      title: "Diferencia entre otros ", 
+      description: "Nosotros somos transparentes y sin filtro, Por lo cual cada trade enviado siempre va directo al track que tenemos diario, hasta terminar mes con mes. Apreciamos tanto como una racha negativa y una racha positiva. En FX KILLERS cuando ganamos, ganamos todos juntos y si perdemos, perdemos juntos." 
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(5); 
+  const [currentIndex, setCurrentIndex] = useState(1); 
 
   const prevSlide = () => setCurrentIndex((prev) => (prev === 0 ? infoItems.length - 1 : prev - 1));
   const nextSlide = () => setCurrentIndex((prev) => (prev === infoItems.length - 1 ? 0 : prev + 1));

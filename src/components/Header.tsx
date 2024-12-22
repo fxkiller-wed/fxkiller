@@ -16,8 +16,8 @@ const Header = () => {
   }
 
   const navItems = [
-    { name: 'Home', path: '/home' },
-    { name: 'Community + Course', path: '/suscriptions' },
+    { name: 'Inicio', path: '/home' },
+    { name: 'Suscripciones', path: '/suscriptions' },
     { name: 'FAQs', path: '/FAQs' },
   ];
 
@@ -85,7 +85,7 @@ const Header = () => {
             <Link
               to="/contact"
               className="btn-about-us text-gray-50 px-5 py-2 font-urbanist  rounded-full">
-              Confirm Us
+              Contáctanos
             </Link>
           </motion.div>
         </motion.div>
