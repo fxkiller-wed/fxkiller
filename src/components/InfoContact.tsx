@@ -99,7 +99,7 @@ const InfoContact = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Newsletter
+          Envianos tu correo
         </motion.div>
         {isSubscribed ? (
           <motion.div
@@ -143,7 +143,7 @@ const InfoContact = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="text-2xl font-urbanist text-center font-semibold contact-home-highlight">
-            All my networks
+            Todas nuestras redes sociales
           </div>
           {Networks.map((network, index) => (
             <motion.div

@@ -53,22 +53,20 @@ const AboutMe = () => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="contact-home-highlight font-poppins font-semibold text-xl mb-4">About Me</div>
+      <div className="contact-home-highlight font-poppins font-semibold text-xl mb-4">¿Quién está detrás?</div>
 
-      {/* Contenedor principal */}
       <motion.div
         className="w-full flex flex-col items-center justify-center lg:flex-row gap-4"
         initial={{ y: 50 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Foto */}
         <motion.div
           initial={{ opacity: 0, scale: 0.3 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="relative w-80 h-80 btn-why-chosee" // Ajuste del tamaño de la foto
+          className="relative w-80 h-80 btn-why-chosee" 
         >
           <img
             src={Photo}
@@ -77,7 +75,6 @@ const AboutMe = () => {
           />
         </motion.div>
 
-        {/* Información */}
         <motion.div
           className="w-full lg:w-[700px] bg-green1 opacity-90 relative z-10 xl:rounded-xl p-4 sm:p-6 "
           initial={{ opacity: 0, scale: 0.3 }}
