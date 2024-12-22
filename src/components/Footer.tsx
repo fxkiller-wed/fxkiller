@@ -38,26 +38,26 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="flex flex-col gap-2 px-5 mt-6"
         >
-          <div className="font-greatVibes    contact-home-highlight text-4xl pt-2">
-            Community
+          <div className="font-greatVibes   contact-home-highlight text-4xl px-1 py-1">
+            Comunidad
           </div>
           <RouterLink
             to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Home
+            Inicio
           </RouterLink>
           <RouterLink
             to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Testimonials
+            Testimonios
           </RouterLink>
           <RouterLink
             to="/home"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Why Chosee
+            Porque Elegirnos
           </RouterLink>
         </motion.div>
 
@@ -68,19 +68,19 @@ const Footer = () => {
           className="flex flex-col gap-2 mt-6"
         >
           <div className="font-greatVibes    contact-home-highlight text-4xl pt-2">
-            Company
+            Compañía
           </div>
           <RouterLink
             to="/suscriptions"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Subscription
+            Subscripciones
           </RouterLink>
           <RouterLink
             to="/contact"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Confirm Us
+            Contactános
           </RouterLink>
           <RouterLink
             to="/FAQs"
@@ -96,13 +96,13 @@ const Footer = () => {
           className="flex flex-col gap-2 mt-6"
         >
           <div className="font-greatVibes    contact-home-highlight text-center text-4xl pt-2">
-            Contact
+            Contactános
           </div>
           <RouterLink
             to="/contact"
             className=" btn-about-us text-gray-50 px-8 py-2 font-urbanist rounded-full"
           >
-            Confirm Us
+            Contactános
           </RouterLink>
           <div className="flex justify-between gap-3">
             {navIcons.map((item, index) => (
@@ -129,19 +129,19 @@ const Footer = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="flex flex-col px-5 w-full mt-4"
       >
-        <div className="w-full h-[1px] btn-about-us flex justify-center items-center"></div>
+        <div className="w-full h-[1px] btn-why-chosee flex justify-center items-center"></div>
         <div className="w-full text-center text-gray-200 flex justify-between items-center">
           <RouterLink
             to="/terms"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Terms and Conditions
+            Terminos y Condiciones
           </RouterLink>
           <div className="text-sm font-urbanist py-4 px-2">
-            © 2024 FX KILLERS TRADING HOUSE, All rights reserved.
+            © 2024 FX KILLERS, Todos los derechos reservados.
           </div>
           <div className="text-lg font-urbanist  flex items-center ">
-            From Mexico
+            Somos de Mexico
           </div>
         </div>
       </motion.div>

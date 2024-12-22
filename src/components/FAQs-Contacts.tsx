@@ -142,7 +142,7 @@ const FAQsContacts = () => {
             </div>
   
             <div className="flex flex-col gap-4">
-              <h3 className="font-greatVibes text-5xl text-center text-gray-100 mt-7">Nuestro Producto</h3>
+              <h3 className="font-greatVibes text-5xl text-center text-gray-100 mt-7">Nuestros Productos</h3>
               <div className="flex h-[200px] xl:h-[300px] w-full items-center justify-center overflow-hidden rounded-xl">
                 <motion.img
                   src={ImgProduct}

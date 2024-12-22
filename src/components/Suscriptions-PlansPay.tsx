@@ -16,10 +16,9 @@ interface Plan {
 const PlansPay: React.FC = () => {
   const plans: Plan[] = [
     {
-      title: "For Growing Business",
+      title: "VIP Premium",
       price: "149.00",
       period: "/mes",
-      tag: "PREMIUM VIP",
       features: [
         "Soporte de moderadores 24/5",
         "BIAS (dirección diaria y semanal)",
@@ -27,26 +26,26 @@ const PlansPay: React.FC = () => {
         "Nutrióloga Personal y Grupal",
         "Live Sessions de Trading semanal",
         "Casos de estudio",
-        "Idiomas (Inglés + Francés)",
-        "Recap semanal de Trades"
+        "Clases en Inglés y Francés",
+        "Recap semanal de Trades",
+        "Acceso total en Discord"
       ],
       buttonText: "¡Únete!",
     },
     {
-      title: "PDF The Best ICT Guide",
+      title: "Prime Traders",
       price: "949.00",
-      period: "/único pago",
-      tag: "BLACKFRIDAY30",
+      period: "/único pago", 
       features: [
-        "PDF de 142 pag.",
+        "PDF the best ICT guide",
         "Masterclass personalizada 1hr.",
-        "Acceso a sección especial de Pro Traders (30 días).",
+        "Acceso a sección exclusiva Prime Traders (30 días).",
         "Casos de estudio (modo PDF).",
         "Masterclasses grupales fechas random.",
-        "Reuniones de Pro Traders en tu país.",
+        "Reuniones en tu país.",
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
-      buttonText: "Adquiere Pro Traders",
+      buttonText: "Lista de espera",
     },
     {
       title: "Coaching 1ON1",
@@ -59,9 +58,9 @@ const PlansPay: React.FC = () => {
         "PDF The Best ICT Guide incluido 2.0",
         "WhatsApp personal de babyivanfx",
         "90 días gratis en Membresía Premium VIP",
-        "Acceso Pro Traders 30 días"
+        "Acceso Prime Traders 30 Días"
       ],
-      buttonText: "Reserva 60 días antes",
+      buttonText: "Llena tu aplicación",
     }
   ];
 
@@ -88,11 +87,8 @@ const PlansPay: React.FC = () => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      <span className="font-urbanist font-semibold contact-home-highlight text-xl">
-        Suscriptions
-      </span>
       <div className="text-beige1 text-6xl font-greatVibes text-center p-3">
-        Planes perfectos para tus necesidades:
+        Suscripciones
       </div>
       <div className="font-urbanist text-gray-200 text-center text-lg">
         Ofrecemos una gama de planes de precios flexibles diseñados para adaptarse a traders de todos los tamaños.

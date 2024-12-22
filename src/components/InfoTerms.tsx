@@ -3,14 +3,14 @@ const InfoTerms = () => {
     <>
       <div className="flex flex-col justify-center items-center gap-3 mx-32 text-xl">
         <div className="font-greatVibes text-beige1 text-7xl pt-2">
-          Terms & Conditions
+          Terminos y Condiciones
         </div>
         <div className="font-urbanist flex flex-col gap-6">
           <div>
-            Términos y Condiciones de FX KILLERS TRADING HOUSE Por favor,
+            Términos y Condiciones de FX KILLERS Por favor,
             considere detenidamente los siguientes términos y condiciones antes
             de acceder o utilizar cualquier contenido publicado y distribuido
-            por FX KILLERS TRADING HOUSE Al acceder a nuestro contenido, usted
+            por FX KILLERS Al acceder a nuestro contenido, usted
             acepta y se compromete a cumplir con estos términos. Propósito de la
             Información: Todo el contenido proporcionado por la Compañía debe
             ser tratado exclusivamente como información general. Ninguna de las
@@ -45,23 +45,23 @@ const InfoTerms = () => {
             Propósito Educativo: Todo el contenido proporcionado por la Compañía
             tiene fines educativos. Se insta a los usuarios a no invertir dinero
             que no puedan permitirse perder. Membresías y Cancelaciones: Las
-            membresías mencionadas en fxkillerstradinghouse.com son mensuales o
+            membresías mencionadas en fxkillers.mx son mensuales o
             de pago anual. Los clientes pueden cancelar sus membresías en
             cualquier momento sin restricciones.
           </div>
           <div>
             No Servicios Adicionales ni Patrocinios Externos: La Compañía no
             ofrece servicios adicionales a sus membresías mencionadas en
-            fxkillerstradinghouse.com y no tiene patrocinios con ninguna otra
+            fxkillers.mx y no tiene patrocinios con ninguna otra
             compañía externa de ningún tipo. Actividad en el Servidor: En esta
             comunidad privada tenemos control de cada uno de las actividades que
             el usuario realiza, alguna que no esté correcta terminarás Banneado
             y posteado en nuestro control de moderadores por nuestra seguridad.
-            Al acceder y utilizar el contenido de FX KILLERS TRADING HOUSE, LLC,
+            Al acceder y utilizar el contenido de FX KILLERS, LLC,
             usted reconoce y acepta plenamente estos términos y condiciones. La
             Compañía se reserva el derecho de modificar estos términos en
             cualquier momento sin previo aviso. Política de Privacidad de FX
-            KILLERS TRADING HOUSE, LLC 12/12/22
+            KILLERS, LLC 12/12/22
           </div>
           <div>
             Cancelación o Rembolsos: El cliente solicita un rembolso dentro de
@@ -85,8 +85,7 @@ const InfoTerms = () => {
             cliente no necesita ayuda de soporte.
           </div>
           <div>
-            Bienvenido/a a la Política de Privacidad de FX KILLERS TRADING
-            HOUSE, ("nosotros", "nuestro" o "la Compañía"). Esta política
+            Bienvenido/a a la Política de Privacidad de FX KILLERS, ("nosotros", "nuestro" o "la Compañía"). Esta política
             describe cómo recopilamos, utilizamos y protegemos la información
             personal que pueda proporcionarnos a través del acceso VIP a nuestro
             servidor de Discord exclusivo.Al utilizar nuestros servicios y
@@ -135,8 +134,7 @@ const InfoTerms = () => {
             y no recopilamos intencionalmente información personal de ellos.Para
             cualquier pregunta o inquietud relacionada con nuestra Política de
             Privacidad, puede comunicarse con nosotros a través de:
-            support@fxkillerstradinghouse.com Gracias por confiar en FX KILLERS
-            TRADING HOUSE, LLC.
+            soporte@fxkillers.mx Gracias por confiar en FX KILLERS, LLC.
           </div>
         </div>
       </div>
