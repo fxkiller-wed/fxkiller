@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
-import { FaYoutube, FaInstagram, FaDiscord } from "react-icons/fa";
+import { FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import SelloFooter from "@/assets/img/isologo.png";
 import Tagline from "@/assets/img/tagline-horizontal-FX-killers.png"
 
 const Footer = () => {
   const navIcons = [
     { icon: <FaYoutube />, href: "https://www.youtube.com/@babyivanfx" },
-    { icon: <FaInstagram />, href: "https://www.instagram.com/babyivanfx/" },
-    { icon: <FaDiscord />, href: "" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com/fxkillers.mx/" },
+    { icon: <FaXTwitter />, href: "https://x.com/fxkillersmx" },
   ];
 
   return (
@@ -95,7 +96,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col gap-2 mt-6"
         >
-          <div className="font-greatVibes    contact-home-highlight text-center text-4xl pt-2">
+          <div className="font-greatVibes contact-home-highlight text-center text-4xl pt-2">
             Contactános
           </div>
           <RouterLink
@@ -135,12 +136,12 @@ const Footer = () => {
             to="/terms"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Terminos y Condiciones
+            Términos y Condiciones
           </RouterLink>
           <div className="text-sm font-urbanist py-4 px-2">
             © 2024 FX KILLERS, Todos los derechos reservados.
           </div>
-          <div className="text-lg font-urbanist  flex items-center ">
+          <div className="font-urbanist  flex items-center ">
             Somos de Mexico
           </div>
         </div>

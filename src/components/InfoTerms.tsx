@@ -3,7 +3,7 @@ const InfoTerms = () => {
     <>
       <div className="flex flex-col justify-center items-center gap-3 mx-32 text-xl">
         <div className="font-greatVibes text-beige1 text-7xl pt-2">
-          Terminos y Condiciones
+          Términos y Condiciones
         </div>
         <div className="font-urbanist flex flex-col gap-6">
           <div>
