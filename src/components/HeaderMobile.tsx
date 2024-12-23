@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FaYoutube, FaInstagram, FaDiscord } from 'react-icons/fa';
+import { FaYoutube, FaInstagram} from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { motion } from 'framer-motion'; 
 
 const HeaderMobile = () => {
@@ -54,7 +55,7 @@ const HeaderMobile = () => {
         <Link
           to="/contact"
           className=" btn-about-us text-gray-50 px-16 py-3 mt-10 font-urbanist text-xl text-center">
-          Confirm Us
+          Contactános
         </Link>
       </motion.div>
 
@@ -72,7 +73,7 @@ const HeaderMobile = () => {
         </motion.a>
         
         <motion.a
-          href="https://www.instagram.com/babyivanfx/"
+          href="https://www.instagram.com/fxkillers.mx/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue1 hover:text-beige1 text-3xl transition duration-300 transform hover:scale-150"
@@ -84,7 +85,7 @@ const HeaderMobile = () => {
         </motion.a>
         
         <motion.a
-          href="#"
+          href="https://x.com/fxkillersmx"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue1 hover:text-beige1 text-3xl transition duration-300 transform hover:scale-150"
@@ -92,7 +93,7 @@ const HeaderMobile = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.3, delay: 0.8 }}
         >
-          <FaDiscord className='text-4xl' />
+          <FaXTwitter className='text-4xl' />
         </motion.a>
       </div>
     </motion.nav>
