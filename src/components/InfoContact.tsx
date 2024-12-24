@@ -67,7 +67,7 @@ const InfoContact = () => {
           <img src={IconContact} alt="Icono Contacto" />
         </div>
         <div className="w-28 sm:w-32 h-10 sm:h-12 flex justify-center items-center contact-btn-form-home rounded-xl contact-btn-form-home hover:scale-105 transition duration-300">
-          <Link to="/home" className="font-urbanist text-gray-100">
+          <Link to="/inicio" className="font-urbanist text-gray-100">
             Ver Website
           </Link>
         </div>

@@ -43,19 +43,19 @@ const Footer = () => {
             Comunidad
           </div>
           <RouterLink
-            to="/home"
+            to="/inicio"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Inicio
           </RouterLink>
           <RouterLink
-            to="/home"
+            to="/inicio"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Testimonios
           </RouterLink>
           <RouterLink
-            to="/home"
+            to="/inicio"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Porque Elegirnos
@@ -72,7 +72,7 @@ const Footer = () => {
             Compañía
           </div>
           <RouterLink
-            to="/suscriptions"
+            to="/suscripciones"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Suscripciones
@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="w-full h-[1px] btn-why-chosee flex justify-center items-center"></div>
         <div className="w-full text-center text-gray-200 flex justify-between items-center">
           <RouterLink
-            to="/terms"
+            to="/terminos"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Términos y Condiciones
