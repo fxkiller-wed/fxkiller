@@ -30,7 +30,7 @@ const HeaderMobile = () => {
       >
         <Link className="relative group transition duration-300 ease-in-out font-semibold hover:text-beige1" 
         to="/suscriptions">
-          Community + Course
+          Suscripciones 
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige1 transition-all duration-300 group-hover:w-full"/>
         </Link>
       </motion.div>
