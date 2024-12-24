@@ -75,7 +75,7 @@ const Footer = () => {
             to="/suscriptions"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
-            Subscripciones
+            Suscripciones
           </RouterLink>
           <RouterLink
             to="/contact"

@@ -49,8 +49,8 @@ const Welcome = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="w-full flex justify-center">
-          <img src={Logo} alt="Logo" className="w-36 lg:w-72 absolute z-10"/>
+        <div className="w-full flex justify-center mt-14">
+          <img src={Logo} alt="Logo" className="w-36 lg:w-72 absolute z-10 -mt-12 lg:-mt-16"/>
         </div>
         {/* Video Container */}
         <div className="mt-10 lg:mt-20 relative w-full aspect-video rounded-xl shadow-lg shadow-gray-950 p-1 btn-bg-black">

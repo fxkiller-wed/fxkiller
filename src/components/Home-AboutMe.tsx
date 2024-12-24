@@ -90,7 +90,7 @@ const AboutMe = () => {
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
             className="flex flex-col sm:flex-row items-center text-center gap-2"
           >
-            <span className="font-urbanist text-3xl sm:text-4xl text-gray-50">CEO e Instructor</span>
+            <span className="font-urbanist text-3xl sm:text-4xl text-gray-50">CEO & Instructor</span>
             <span className="contact-home-highlight text-gray-100 font-greatVibes text-5xl sm:text-5xl py-3">Ivan Vargas</span>
           </motion.div>
           <motion.div
