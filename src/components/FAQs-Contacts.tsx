@@ -68,7 +68,7 @@ const FAQsContacts = () => {
         <div>Estamos aquí para ayudarte en todo momento.</div>
         <div>Déjanos un mensaje y nos pondremos en contacto contigo pronto.</div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-around gap-8">
+      <div className="w-full flex flex-col lg:flex-row justify-around px-4 lg:px-0 bg-blue1 rounded-2xl">
         {isSubscribed ? (
           <div className="flex justify-center items-center">
             <motion.div
@@ -86,9 +86,9 @@ const FAQsContacts = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="relative z-10 flex flex-col xl:flex-row gap-10 justify-center items-center bg-blue1 shadow-lg rounded-2xl p-8 w-full lg:w-[1000px]"
+            className="relative z-10 flex flex-col xl:flex-row justify-center items-center w-full py-4"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 w-full lg:w-[500px]">
               <h3 className="font-greatVibes text-5xl text-center text-white pt-2 mb-6 contact-home-highlight">
                 Formulario de Contacto
               </h3>
@@ -140,22 +140,18 @@ const FAQsContacts = () => {
                 </div>
               )}
             </div>
-  
-            <div className="flex flex-col gap-4">
-              <h3 className="font-greatVibes text-5xl text-center text-gray-100 mt-7">Nuestros Productos</h3>
-              <div className="flex h-[200px] xl:h-[300px] w-full items-center justify-center overflow-hidden rounded-xl">
-                <motion.img
-                  src={ImgProduct}
-                  alt="Product"
-                  className="h-full w-auto object-cover"
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.1, rotate: 3 }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-            </div>
           </motion.form>
         )}
+        <div className="flex w-full items-center overflow-hidden rounded-xl justify-end">
+          <motion.img
+            src={ImgProduct}
+            alt="Product"
+            className="h-full w-auto object-cover"
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
       </div>
     </motion.div>
   );
