@@ -141,8 +141,8 @@ const Footer = () => {
           <div className="text-sm font-urbanist py-4 px-2">
             © 2024 FX KILLERS, Todos los derechos reservados.
           </div>
-          <div className="font-urbanist  flex items-center ">
-            Somos de Mexico
+          <div className="font-urbanist flex items-center flex-col lg:flex-row gap-1">
+            Desarrolladores<a href="https://github.com/KeniBeck" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">KeniBeck</a>&<a href="https://github.com/Yedixdev" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">Yedixdev</a>
           </div>
         </div>
       </motion.div>
