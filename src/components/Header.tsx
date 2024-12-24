@@ -83,7 +83,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1.4 }}>
             <Link
-              to="/contact"
+              to="/contacto"
               className="btn-about-us text-gray-50 px-5 py-2 font-urbanist  rounded-full">
               Contáctanos
             </Link>

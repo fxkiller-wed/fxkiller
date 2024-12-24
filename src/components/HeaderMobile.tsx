@@ -53,7 +53,7 @@ const HeaderMobile = () => {
         transition={{ duration: 0.5, delay: 1 }}
       >
         <Link
-          to="/contact"
+          to="/contacto"
           className=" btn-about-us text-gray-50 px-16 py-3 mt-10 font-urbanist text-xl text-center">
           Contactános
         </Link>

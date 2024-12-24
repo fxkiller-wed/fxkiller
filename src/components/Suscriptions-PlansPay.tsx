@@ -9,6 +9,7 @@ interface Plan {
   tag?: string;
   features: string[];
   buttonText: string;
+  link: string;
   width?: string;
   height?: string;
 }
@@ -31,6 +32,7 @@ const PlansPay: React.FC = () => {
         "Acceso total en Discord"
       ],
       buttonText: "¡Únete!",
+      link: "https://www.launchpass.com/fx-killers-trading-house/premiumvip"
     },
     {
       title: "Prime Traders",
@@ -46,6 +48,7 @@ const PlansPay: React.FC = () => {
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
       buttonText: "Lista de espera",
+      link: "https://book.stripe.com/aEU7vZ6WGdjscEM5kG"
     },
     {
       title: "Coaching 1ON1",
@@ -61,6 +64,7 @@ const PlansPay: React.FC = () => {
         "Acceso Prime Traders 30 Días"
       ],
       buttonText: "Llena tu aplicación",
+      link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"
     }
   ];
 
@@ -126,6 +130,7 @@ const PlansPay: React.FC = () => {
               </ul>
             </div>
             <button
+              onClick={() => window.location.href = plan.link}
               className="bg-gradient-to-l from-[#2e5ca7] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2] text-gray-200 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
             >
               {plan.buttonText}

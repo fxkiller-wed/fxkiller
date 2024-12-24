@@ -78,7 +78,7 @@ const Footer = () => {
             Suscripciones
           </RouterLink>
           <RouterLink
-            to="/contact"
+            to="/contacto"
             className="text-gray-200 font-urbanist cursor-pointer hover:text-beige2"
           >
             Contactános
@@ -100,7 +100,7 @@ const Footer = () => {
             Contactános
           </div>
           <RouterLink
-            to="/contact"
+            to="/contacto"
             className=" btn-about-us text-gray-50 px-8 py-2 font-urbanist rounded-full"
           >
             Contactános
