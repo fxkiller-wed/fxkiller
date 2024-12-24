@@ -42,7 +42,7 @@ const FAQsAccordions: React.FC = () => {
 
   return (
     <motion.div
-      className="xl:w-[1250px] bg-blue1 h-auto mx-auto p-5 rounded-2xl flex flex-col py-10 items-center"
+      className="xl:w-[1200px] bg-blue1 h-auto mx-auto p-5 rounded-2xl flex flex-col py-10 items-center"
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}

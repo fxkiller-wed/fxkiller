@@ -10,7 +10,7 @@ const Testimonial: React.FC = () => {
 
   return (
     <div
-      className="px-6 flex flex-col justify-center items-center lg:rounded-2xl my-10 h-auto w-full xl:w-[1250px] pt-5 relative z-10 xl:rounded-2xl"
+      className="px-6 flex flex-col justify-center items-center lg:rounded-2xl  h-auto w-full xl:w-[1250px] pt-5 relative z-10 xl:rounded-2xl"
     >
       <div className="py-4 text-center mb-6 text-beige1 font-greatVibes text-5xl lg:6xl xl:text-7xl">
         Testimonios 

@@ -42,18 +42,17 @@ const Welcome = () => {
   }, [isSubscribed]);
 
   return (
-    <div id="home-welcome" className="w-full flex items-center justify-center relative">
+    <div id="home-welcome" className="w-full flex items-center justify-center ">
       <motion.div
         className="w-[90%] sm:w-[85%] md:w-[80%] max-w-[900px] rounded-xl relative"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="w-full flex justify-center mt-14">
-          <img src={Logo} alt="Logo" className="w-36 lg:w-72 absolute z-10 -mt-12 lg:-mt-16"/>
+        <div className="w-full flex justify-center ">
+          <img src={Logo} alt="Logo" className="w-36 my-2 lg:w-60"/>
         </div>
-        {/* Video Container */}
-        <div className="mt-10 lg:mt-20 relative w-full aspect-video rounded-xl shadow-lg shadow-gray-950 p-1 btn-bg-black">
+        <div className=" relative w-full aspect-video rounded-xl shadow-lg shadow-gray-950 p-1 btn-bg-black">
           <iframe
             className="w-full h-full rounded-xl"
             src="https://www.youtube.com/embed/NyiDPn4ZO0I"
@@ -62,17 +61,8 @@ const Welcome = () => {
             allowFullScreen
           />
         </div>
-
-        {/* Form Section */}
-        <div className="mt-6 lg:pb-4 sm:absolute sm:bottom-0 sm:left-0 sm:w-full sm:bg-gradient-to-t flex flex-col sm:from-black/100 sm:to-transparent sm:rounded-xl">
-          <motion.h2
-            className="text-base sm:hidden font-semibold text-center contact-home-highlight font-urbanist mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Suscribete para más información
-          </motion.h2>
+        <div className="mt-6 lg:pb-4 sm:bottom-0 sm:left-0 sm:w-full sm:bg-gradient-to-t flex flex-col sm:to-transparent sm:rounded-xl">
+          <div className="font-semibold font-urbanist text-xl text-center mb-3 text-beige1">Newsletter e Información exclusiva</div>
           {isSubscribed ? (
             <div className="w-full flex justify-center ">
               <motion.div
@@ -84,17 +74,18 @@ const Welcome = () => {
                 <span className="text-sm sm:text-lg text-center font-urbanist text-white">{message}</span>
               </motion.div>
             </div>
-          ) : (
+          ) : (          
             <motion.form
               onSubmit={handleSubmit}
               className="flex sm:flex-row items-center gap-3 btn-why-chosee p-2 rounded-xl shadow-md w-full max-w-xl mx-auto bg-black/40 sm:bg-transparent"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-            >
+            > 
+           
               <input
                 type="email"
-                placeholder="Correo electrónico"
+                placeholder="Escribe tu email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

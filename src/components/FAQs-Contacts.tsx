@@ -61,14 +61,14 @@ const FAQsContacts = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
-      className="p-6 flex flex-col justify-center items-center lg:rounded-2xl my-5 h-auto w-full xl:w-[1250px] py-5 px-10 relative z-10 xl:rounded-2xl"
+      className="p-6 flex flex-col justify-center items-center lg:rounded-2xl my-5 h-auto w-full xl:w-[1100px] py-5 px-10 relative z-10 xl:rounded-2xl"
     >
       <div className="font-greatVibes text-blue1 text-6xl text-center pt-2">Contactate con Nosotros</div>
       <div className="flex flex-col font-urbanist text-lg text-blue-1 text-center mb-5 font-medium">
         <div>Estamos aquí para ayudarte en todo momento.</div>
         <div>Déjanos un mensaje y nos pondremos en contacto contigo pronto.</div>
       </div>
-      <div className="w-full flex flex-col lg:flex-row justify-around px-4 lg:px-0 bg-blue1 rounded-2xl">
+      <div className="w-full flex flex-col lg:flex-row justify-around bg-blue1 rounded-2xl">
         {isSubscribed ? (
           <div className="flex justify-center items-center">
             <motion.div
@@ -86,7 +86,7 @@ const FAQsContacts = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="relative z-10 flex flex-col xl:flex-row justify-center items-center w-full py-4"
+            className="relative z-10 flex flex-col xl:flex-row justify-center items-center w-full p-6"
           >
             <div className="flex flex-col gap-4 w-full lg:w-[500px]">
               <h3 className="font-greatVibes text-5xl text-center text-white pt-2 mb-6 contact-home-highlight">
@@ -142,7 +142,7 @@ const FAQsContacts = () => {
             </div>
           </motion.form>
         )}
-        <div className="flex w-full items-center overflow-hidden rounded-xl justify-end">
+        <div className="flex w-full items-center overflow-hidden lg:rounded-xl justify-end">
           <motion.img
             src={ImgProduct}
             alt="Product"
