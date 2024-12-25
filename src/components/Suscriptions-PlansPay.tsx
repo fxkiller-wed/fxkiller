@@ -48,7 +48,7 @@ const PlansPay: React.FC = () => {
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
       buttonText: "Lista de espera",
-      link: "https://book.stripe.com/aEU7vZ6WGdjscEM5kG"
+      link: "https://book.stripe.com/3cs9E7bcWfrAawEaF8"
     },
     {
       title: "Coaching 1ON1",
