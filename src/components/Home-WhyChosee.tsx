@@ -52,7 +52,7 @@ const HomeWhyChosee = () => {
                 `}
               >
                 <h3 className="mb-2 text-center text-2xl lg:text-3xl sm:text-base md:text-lg">{item.title}</h3>
-                <p className="text-center text-base sm:text-sm md:text-base">{item.description}</p>
+                <p className="text-center text-sm sm:text-sm md:text-base">{item.description}</p>
               </div>
             );
           })}
