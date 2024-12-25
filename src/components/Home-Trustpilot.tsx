@@ -21,14 +21,14 @@ const HomeTrustpilot = () => {
           Calificación de nuestros clientes
         </p>
       </div>
-      <a
-        href="https://es.trustpilot.com/review/fxkillersacademy.com"
+      {/* <a
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         className="contact-btn-form-home text-blue1 px-6 py-2 font-urbanist font-semibold text-sm md:text-base rounded-xl"
       >
         Ver más opiniones
-      </a>
+      </a> */}
     </motion.div>
   );
 };
