@@ -55,7 +55,7 @@ const Welcome = () => {
         <div className=" relative w-full aspect-video rounded-xl shadow-lg shadow-gray-950 p-1 btn-bg-black">
           <iframe
             className="w-full h-full rounded-xl"
-            src="https://www.youtube.com/embed/NyiDPn4ZO0I"
+            src="https://youtu.be/y5k-BMndVco"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowFullScreen
