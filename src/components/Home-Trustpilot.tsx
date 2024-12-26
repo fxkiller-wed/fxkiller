@@ -8,7 +8,7 @@ const HomeTrustpilot = () => {
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="h-auto w-full lg:w-[600px] flex flex-col relative z-10 overflow-hidden xl:text-[42px]  justify-center items-center py bg-[#0a0c18] lg:rounded-2xl shadow-lg py-5 mb-5 lg:border-2 lg:border-beige1"
+      className="h-auto w-full lg:w-[600px] flex flex-col relative z-10 overflow-hidden xl:text-[42px]  justify-center items-center py py-5 mb-5 "
     >
       <img
         src={TrustpilotLogo}
@@ -17,9 +17,6 @@ const HomeTrustpilot = () => {
       />
       <div className="font-urbanist text-lg md:text-2xl text-beige2 text-center">
         <span className="text-beige2 font-semibold">4.87 ★★★★★</span>
-        <p className="text-lg md:text-xl text-gray-200 my-2">
-          Calificación de nuestros clientes
-        </p>
       </div>
       <div className="flex justify-center items-center mt-3 lg:mt-0">
         <div className="trustpilot-widget" data-locale="es-ES" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="676c5f6781011505a3a0e065" data-style-height="52px" data-style-width="100%">
