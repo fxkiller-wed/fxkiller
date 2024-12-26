@@ -17,11 +17,11 @@ const HomeTrustpilot = () => {
       />
       <div className="font-urbanist text-lg md:text-2xl text-beige2 text-center">
         <span className="text-beige2 font-semibold">4.87 ★★★★★</span>
-        <p className="text-sm md:text-lg text-gray-200 my-2">
+        <p className="text-lg md:text-xl text-gray-200 my-2">
           Calificación de nuestros clientes
         </p>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-3 lg:mt-0">
         <div className="trustpilot-widget" data-locale="es-ES" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="676c5f6781011505a3a0e065" data-style-height="52px" data-style-width="100%">
           <a href="https://es.trustpilot.com/review/fxkillers.mx" target="_blank" rel="noopener noreferrer" className="contact-btn-form-home text-blue1 px-6 py-3 font-urbanist font-semibold text-sm md:text-base rounded-xl">
             Ver más opiniones
