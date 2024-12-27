@@ -27,7 +27,7 @@ const FAQsAccordions: React.FC = () => {
     1: [
       { question: "¿Dónde puedo consultar los resultados pasados mensuales?", answer: "Los resultados mensuales están disponibles en nuestra sección #resultados en Discord. Allí encontrarás un desglose detallado con estadísticas de rendimiento y análisis." },
       { question: "¿Qué sesiones operativas cubren en su comunidad?", answer: "Nos enfocamos en las sesiones de mercado de Nueva York y, en ocasiones, las de Londres, para garantizar las mejores oportunidades de liquidez y análisis en tiempo real." },
-      { question: "¿Cómo puedo acceder a las grabaciones de las sesiones en vivo?", answer: "Todas las sesiones se graban y se suben al portal de membresía en un plazo de 24 horas, permitiéndote acceder a ellas cuando lo necesites." },
+      { question: "¿Cómo puedo acceder a las grabaciones de las sesiones en vivo?", answer: "Una session es privada & exclusiva del server, no se graba ni se repite, los lives en NewYork y Londres son privados." },
     ],
     2: [
       { question: "¿Cuánta experiencia necesito para aprovechar el PDF?", answer: "El PDF está diseñado para traders con nivel intermedio a avanzado. Es ideal si ya tienes conocimientos sólidos en análisis técnico y estrategias de gestión de riesgos." },
@@ -83,7 +83,7 @@ const FAQsAccordions: React.FC = () => {
             <div className="w-full md:w-[500px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-1">
               <iframe
                 className="w-full aspect-video rounded-xl btn-bg-black shadow-lg shadow-gray-950"
-                src="https://youtu.be/y5k-BMndVco"
+                src="https://youtu.be/wF29e2IuAok"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
