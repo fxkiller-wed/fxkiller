@@ -83,7 +83,7 @@ const FAQsAccordions: React.FC = () => {
             <div className="w-full md:w-[500px] flex justify-center items-center rounded-xl overflow-hidden btn-bg-black p-1">
               <iframe
                 className="w-full aspect-video rounded-xl btn-bg-black shadow-lg shadow-gray-950"
-                src="https://youtu.be/wF29e2IuAok"
+                src="https://www.youtube.com/embed/wF29e2IuAok?si=p8hc-KTzdc_1R_Pb"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
