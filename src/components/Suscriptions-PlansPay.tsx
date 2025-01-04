@@ -31,8 +31,8 @@ const PlansPay: React.FC = () => {
         "Recap semanal de Trades",
         "Acceso total en Discord"
       ],
-      buttonText: "¡Únete!",
-      link: "https://www.launchpass.com/fx-killers-trading-house/premiumvip"
+      buttonText: "Llena tu aplicación",
+      link: "/contacto"
     },
     {
       title: "Prime Traders",
@@ -47,8 +47,8 @@ const PlansPay: React.FC = () => {
         "Reuniones en tu país.",
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
-      buttonText: "Lista de espera",
-      link: "https://book.stripe.com/3cs9E7bcWfrAawEaF8"
+      buttonText: "Llena tu aplicación",
+      link: "/contacto"
     },
     {
       title: "Coaching 1ON1",
@@ -64,7 +64,7 @@ const PlansPay: React.FC = () => {
         "Acceso Prime Traders 30 Días"
       ],
       buttonText: "Llena tu aplicación",
-      link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"
+      link: "/contacto"
     }
   ];
 

@@ -1,44 +1,13 @@
-import React, { useState } from "react";
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Photo from "@/assets/img/about-me-photo.jpg";
 import IconContact from "@/assets/img/icon-contact.png";
-import { subscribe } from "@/services/subscription";
+import FAQsContacts from "./FAQs-Contacts";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const InfoContact = () => {
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [isSubscribed, setIsSubscribed] = useState<boolean>(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!email) {
-      setMessage("Por favor, ingresa tu correo.");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await subscribe(email);
-
-      if (response.success) {
-        setMessage("¡Gracias por suscribirte! Revisa tu correo para confirmar tu suscripción.");
-        setEmail("");
-        setIsSubscribed(true);
-      } else {
-        setMessage(`Hubo un error: ${response.message}`);
-      }
-    } catch (error) {
-      setMessage("Hubo un problema al enviar tu suscripción.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const Networks = [
     { icon: <FaInstagram />, name: "Instagram", url: "https://www.instagram.com/fxkillers.mx/" },
@@ -92,71 +61,38 @@ const InfoContact = () => {
         </div>
       </motion.div>
 
-      <div className="w-full max-w-3xl mx-auto px-4 flex flex-col justify-center">
-        <motion.div
-          className="contact-home-highlight text-2xl font-urbanist text-center py-5 font-semibold"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          Envianos tu correo
-        </motion.div>
-        {isSubscribed ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="p-4 bg-blue1 rounded-xl flex justify-center items-center"
-          >
-            <span className="text-sm sm:text-xl font-semibold font-urbanist contact-home-highlight text-center">{message}</span>
-          </motion.div>
-        ) : (
-          <motion.form
-            onSubmit={handleSubmit}
-            className="flex sm:flex-row gap-2 justify-center items-center p-2 rounded-2xl btn-about-us"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="p-3 w-full font-urbanist rounded-xl text-gray-100 bg-black1 focus:outline-none focus:ring-2 focus:ring-beige2 placeholder-beige2 transition duration-300 text-sm sm:text-base"
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="whitespace-nowrap px-6 py-3 rounded-xl contact-btn-form-home hover:scale-105 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-urbanist font-semibold text-blue1"
-            >
-              {isSubmitting ? "Suscribiendo..." : "Regístrarme"}
-            </button>
-          </motion.form>
-        )}
+      <div className="w-full flex flex-col items-center justify-center">
+        <FAQsContacts />
 
         <motion.div
-          className="mt-8 flex flex-col justify-center items-center gap-6 font-urbanist text-lg"
+          className="flex flex-col justify-center items-center gap-6 font-urbanist text-lg"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="text-2xl font-urbanist text-center font-semibold contact-home-highlight">
             Todas nuestras redes sociales
           </div>
-          {Networks.map((network, index) => (
-            <motion.div
-              key={index}
-              className="w-full max-w-md h-16 bg-beige1 rounded-xl flex items-center px-4 hover:shadow-lg cursor-pointer transition-all"
-              whileHover={{ scale: 1.05 }}
-              onClick={() => handleNetworkClick(network.url)}
-            >
-              <div className="text-4xl text-gray-800 mr-4">{network.icon}</div>
-              <div className="text-lg text-gray-800"> {network.name}</div>
-            </motion.div>
-          ))}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 font-urbanist text-lg mb-5">
+            {Networks.map((network, index) => (
+              <motion.div
+                key={index}
+                className="w-72 lg:w-80 max-w-md h-16 bg-beige1 rounded-xl flex items-center px-4 hover:shadow-lg cursor-pointer transition-all"
+                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }} 
+                onClick={() => handleNetworkClick(network.url)}
+              >
+                <div className="text-4xl text-gray-800 mr-4">{network.icon}</div>
+                <div className="text-lg text-gray-800">{network.name}</div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
+
       </div>
     </motion.div>
   );
