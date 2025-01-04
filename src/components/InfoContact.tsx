@@ -71,9 +71,6 @@ const InfoContact = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-2xl font-urbanist text-center font-semibold contact-home-highlight">
-            Todas nuestras redes sociales
-          </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 font-urbanist text-lg mb-5">
             {Networks.map((network, index) => (
               <motion.div
