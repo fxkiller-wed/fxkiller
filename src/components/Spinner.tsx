@@ -11,7 +11,7 @@ const Spinner = () => {
     >
       <ThreeDots
         visible={true}
-        height="80"
+        height="60"
         width="80"
         color="#081628"
         radius="9"

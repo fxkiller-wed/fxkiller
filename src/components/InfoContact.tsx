@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Photo from "@/assets/img/about-me-photo.jpg";
+import Photo from "@/assets/img/info-contact.png";
 import IconContact from "@/assets/img/icon-contact.png";
 import FAQsContacts from "./FAQs-Contacts";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
@@ -10,9 +10,9 @@ import { FaXTwitter } from "react-icons/fa6";
 const InfoContact = () => {
 
   const Networks = [
-    { icon: <FaInstagram />, name: "Instagram", url: "https://www.instagram.com/fxkillers.mx/" },
-    { icon: <FaYoutube />, name: "Youtube", url: "https://www.youtube.com/@babyivanfx" },
-    { icon: <FaXTwitter />, name: "Twitter", url: "https://x.com/fxkillersmx" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/fxkillers.mx/" },
+    { icon: <FaYoutube />, url: "https://www.youtube.com/@babyivanfx" },
+    { icon: <FaXTwitter />, url: "https://x.com/fxkillersmx" },
   ];
 
   const handleNetworkClick = (url: string) => {
@@ -48,13 +48,14 @@ const InfoContact = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <div className="my-6 lg:my-0 w-full lg:w-96 flex justify-center items-center">
-          <img className="rounded-xl" src={Photo} alt="Imagen Presentacion" />
-        </div>
-        <div className="flex flex-col justify-center items-center gap-4 font-urbanist text-lg lg:text-2xl p-2">
+        
+        <div className="flex flex-col justify-center items-center gap- font-urbanist text-lg lg:text-2xl">
           <div className="font-greatVibes py-2 contact-home-highlight text-5xl lg:text-7xl text-center">
             Lista de Espera
           </div>
+          <div className="my-6 lg:my-0 w-full lg:w-[800px] flex justify-center items-center">
+          <img className="rounded-xl" src={Photo} alt="Imagen Presentacion" />
+        </div>
           <div className="text-center text-gray-100">
             Dejanos tu correo y tus datos, cuentanos porque quieres formar parte de la comunidad. Nuestro equipo conversará contigo.
           </div>
@@ -64,32 +65,29 @@ const InfoContact = () => {
       <div className="w-full flex flex-col items-center justify-center">
         <FAQsContacts />
 
-        <motion.div
-          className="flex flex-col justify-center items-center gap-6 font-urbanist text-lg"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
         >
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 font-urbanist text-lg mb-5">
-            {Networks.map((network, index) => (
-              <motion.div
-                key={index}
-                className="w-72 lg:w-80 max-w-md h-16 bg-beige1 rounded-xl flex items-center px-4 hover:shadow-lg cursor-pointer transition-all"
-                whileHover={{ scale: 1.05 }}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }} 
-                onClick={() => handleNetworkClick(network.url)}
-              >
-                <div className="text-4xl text-gray-800 mr-4">{network.icon}</div>
-                <div className="text-lg text-gray-800">{network.name}</div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="flex justify-center items-center gap-6 mb-5">
+          {Networks.map((network) => (
+            <motion.div
+              key={network.url} 
+              className="w-16 h-16 bg-beige1 rounded-xl flex justify-center items-center cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.2}}
+              onClick={() => handleNetworkClick(network.url)}
+            >
+              <div className="text-4xl text-gray-800">{network.icon}</div>
+            </motion.div>
+          ))}
+        </div>
         </motion.div>
-
       </div>
     </motion.div>
   );

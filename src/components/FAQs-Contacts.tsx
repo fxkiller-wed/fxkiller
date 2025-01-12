@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import ImgProduct from "@/assets/img/product.png";
 import { subscribeinfo } from "@/services/allinfosubscription"; 
 
 const FAQsContacts = () => {
@@ -80,13 +79,13 @@ const FAQsContacts = () => {
     ) : (
       <motion.form
         onSubmit={handleSubmit}
-        initial={{ x: -1000 }}
+        initial={{ x: -100 }}
         animate={{ x: 0 }}
         transition={{ duration: 1.2 }}
         className="relative z-10 flex flex-col xl:flex-row justify-center items-center w-full p-6"
       >
-        <div className="flex flex-col gap-4 w-full lg:w-[500px]">
-          <h3 className="font-greatVibes text-5xl text-center text-white pt-2 mb-6 contact-home-highlight">
+        <div className="flex flex-col gap-4 w-full lg:w-[700px]">
+          <h3 className="font-greatVibes text-5xl lg:text-7xl text-center text-white pt-2 mb-6 contact-home-highlight">
             Formulario de Contacto
           </h3>
 
@@ -141,21 +140,6 @@ const FAQsContacts = () => {
         </div>
       </motion.form>
     )}
-    <motion.div
-      initial={{ x: 1000 }}
-      animate={{ x: 0 }}
-      transition={{ duration: 1.2 }}
-      className="flex w-full items-center overflow-hidden rounded-xl justify-end"
-    >
-      <motion.img
-        src={ImgProduct}
-        alt="Product"
-        className="h-full w-auto object-cover"
-        initial={{ scale: 1 }}
-        whileHover={{ scale: 1.1, rotate: 3 }}
-        transition={{ duration: 1.2 }}
-      />
-    </motion.div>
   </div>
 </motion.div>
   );
