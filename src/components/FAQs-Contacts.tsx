@@ -33,7 +33,7 @@ const FAQsContacts = () => {
       });
 
       if (response.success) {
-        setFormMessage("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
+        setFormMessage("Gracias por llenar tu aplicación, porfavor revisa tu bandeja de entrada , enviaremos un correo desde soporte@fxkillers.mx");
         setFirstName("");
         setLastName("");
         setEmail("");
