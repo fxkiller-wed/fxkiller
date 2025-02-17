@@ -65,7 +65,7 @@ const PlansPay: React.FC = () => {
                 "Reuniones en tu país",
                 "Track en grupo de chicos 1ON1 estilo Tradezella"
             ],
-            buttonText: "Agenda aquí",
+            buttonText: "Agenda/ 90 días de espera",
             link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"
         }
     ];
