@@ -66,7 +66,8 @@ const PlansPay: React.FC = () => {
                 "Track en grupo de chicos 1ON1 estilo Tradezella"
             ],
             buttonText: "Agenda/ 90 días de espera",
-            link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"
+            link: "#"
+            //https://book.stripe.com/14kcQj6WG0wGcEM00t
         }
     ];
 
