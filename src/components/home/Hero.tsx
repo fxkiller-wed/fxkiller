@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { subscribe } from "@/services/subscription";
 import Logo from "@/assets/img/isotipo-FX-killers.png"
 
-const Welcome = () => {
+const Hero = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -57,7 +57,7 @@ const Welcome = () => {
             className="w-full h-full rounded-xl"
             src="https://www.youtube.com/embed/wF29e2IuAok?si=p8hc-KTzdc_1R_Pb"
             title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
@@ -74,15 +74,15 @@ const Welcome = () => {
                 <span className="text-sm sm:text-lg text-center font-urbanist text-white">{message}</span>
               </motion.div>
             </div>
-          ) : (          
+          ) : (
             <motion.form
               onSubmit={handleSubmit}
               className="flex sm:flex-row items-center gap-3 btn-why-chosee p-2 rounded-xl shadow-md w-full max-w-xl mx-auto bg-black/40 sm:bg-transparent"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-            > 
-           
+            >
+
               <input
                 type="email"
                 placeholder="Escribe tu email"
@@ -106,4 +106,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Hero;
