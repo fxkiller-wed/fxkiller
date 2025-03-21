@@ -36,8 +36,8 @@ const PlansPay: React.FC = () => {
     },
     {
       title: "Prime Traders",
-      price: "949.00",
-      period: "/único pago", 
+      price: "1.500.00",
+      period: "/único pago",
       features: [
         "PDF the best ICT guide",
         "Masterclass personalizada 1hr.",
@@ -48,11 +48,12 @@ const PlansPay: React.FC = () => {
         "Dudas y preguntas en todo momento con Iván Vargas."
       ],
       buttonText: "Accede hoy",
-      link: "https://book.stripe.com/3cs9E7bcWfrAawEaF8"
+      link: ""
+      // https://book.stripe.com/3cs9E7bcWfrAawEaF8
     },
     {
       title: "Coaching 1ON1",
-      price: "1949.00",
+      price: "3000.00",
       period: "/único pago",
       features: [
         "Entrenamiento avanzado 1 semana",
@@ -64,7 +65,8 @@ const PlansPay: React.FC = () => {
         "Acceso Prime Traders 30 Días"
       ],
       buttonText: "Agenda aquí",
-      link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"
+      link: ""
+      // https://book.stripe.com/14kcQj6WG0wGcEM00t
     }
   ];
 
@@ -106,7 +108,7 @@ const PlansPay: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            whileHover={{ 
+            whileHover={{
               scale: 1.03,
               transition: { duration: 0.2 }
             }}
