@@ -36,7 +36,7 @@ const PlansPay: React.FC = () => {
         },
         {
             title: "Prime Traders",
-            price: "949.00",
+            price: "1500.00",
             period: "/único pago",
             features: [
                 "PDF the best ICT guide",
@@ -48,11 +48,12 @@ const PlansPay: React.FC = () => {
                 "Dudas y preguntas en todo momento con Iván Vargas."
             ],
             buttonText: "Accede hoy",
-            link: "https://book.stripe.com/3cs9E7bcWfrAawEaF8"
+            link: ""
+            // https://book.stripe.com/3cs9E7bcWfrAawEaF8
         },
         {
             title: "Coaching 1ON1",
-            price: "1949.00",
+            price: "3000.00",
             period: "/único pago",
             features: [
                 "1 semana junto a Babyivanfx",
@@ -66,7 +67,8 @@ const PlansPay: React.FC = () => {
                 "Track en grupo de chicos 1ON1 estilo Tradezella"
             ],
             buttonText: "Agenda/ 90 días de espera",
-            link: "https://book.stripe.com/14kcQj6WG0wGcEM00t"   
+            link: ""
+            // https://book.stripe.com/14kcQj6WG0wGcEM00t
         }
     ];
 
