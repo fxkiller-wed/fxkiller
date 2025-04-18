@@ -48,8 +48,7 @@ const PlansPay: React.FC = () => {
                 "Dudas y preguntas en todo momento con Iván Vargas."
             ],
             buttonText: "Accede hoy",
-            link: ""
-            // https://book.stripe.com/3cs9E7bcWfrAawEaF8
+            link: "https://buy.stripe.com/00g6rVdl4cfo34caFi"
         },
         {
             title: "Coaching 1ON1",
@@ -67,8 +66,7 @@ const PlansPay: React.FC = () => {
                 "Track en grupo de chicos 1ON1 estilo Tradezella"
             ],
             buttonText: "Agenda/ 90 días de espera",
-            link: ""
-            // https://book.stripe.com/14kcQj6WG0wGcEM00t
+            link: "https://buy.stripe.com/3cs5nR4OygvE2086p3"
         }
     ];
 
