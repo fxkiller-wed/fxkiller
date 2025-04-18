@@ -142,7 +142,7 @@ const Footer = () => {
             © 2024 FX KILLERS, Todos los derechos reservados.
           </div>
           <div className="font-urbanist flex items-center flex-col lg:flex-row gap-1">
-            Desarrolladores<a href="https://github.com/KeniBeck" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">KeniBeck</a><a href="https://github.com/Yedixdev" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">Yedixdev</a>
+            Desarrolladores<a href="https://github.com/KeniBeck" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">KeniBeck</a><a href="https://github.com/YedyDevx" target="_blank" rel="noopener noreferrer" className="text-beige2 hover:text-yellow-100 ml-1">YedyDevx</a>
           </div>
         </div>
       </motion.div>
