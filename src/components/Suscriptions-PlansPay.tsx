@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 
@@ -85,23 +85,51 @@ const PlansPay: React.FC = () => {
         },
     };
 
+    // Structured data for pricing
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "offers": plans.map(plan => ({
+            "@type": "Offer",
+            "name": plan.title,
+            "price": plan.price,
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": plan.link
+        }))
+    };
+
+    useEffect(() => {
+        // Add structured data to document head
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+
+        // Cleanup
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
+
     return (
-        <motion.div
+        <motion.section
             className="xl:w-[1250px] bg-blue1 h-auto mx-auto p-3 lg:rounded-2xl flex flex-col py-5 justify-center items-center"
+            aria-label="Planes de suscripción"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8 }}
         >
-            <div className="text-beige1 text-6xl font-greatVibes text-center p-3">
+            <h1 className="text-beige1 text-6xl font-greatVibes text-center p-3">
                 Suscripciones
-            </div>
-            <div className="font-urbanist text-gray-200 text-center text-lg">
+            </h1>
+            <p className="font-urbanist text-gray-200 text-center text-lg">
                 Ofrecemos una gama de planes de precios flexibles diseñados para adaptarse a traders de todos los tamaños.
-            </div>
+            </p>
             <div className="w-full flex flex-wrap justify-center gap-6 items-center mt-5">
                 {plans.map((plan, index) => (
-                    <motion.div
+                    <motion.article
                         key={index}
                         custom={index}
                         variants={cardVariants}
@@ -113,17 +141,23 @@ const PlansPay: React.FC = () => {
                             transition: { duration: 0.2 }
                         }}
                         className={`bg-[#0a0c18] text-white h-[520px] ${plan.width || "w-72"} rounded-xl p-5 flex flex-col justify-between shadow-xl relative`}
+                        itemScope
+                        itemType="https://schema.org/Product"
                     >
                         <div className="absolute inset-0"></div>
                         <div className="relative z-10">
-                            <h2 className="text-2xl font-bold contact-home-highlight">{plan.title}</h2>
-                            <p className="text-4xl font-bold mt-3">${plan.price} <span className="text-sm">{plan.period}</span></p>
+                            <h2 className="text-2xl font-bold contact-home-highlight" itemProp="name">{plan.title}</h2>
+                            <p className="text-4xl font-bold mt-3">
+                                <span itemProp="price" content={plan.price}>${plan.price}</span>
+                                <span className="text-sm" itemProp="priceCurrency" content="USD">{plan.period}</span>
+                            </p>
                             {plan.tag && <p className="text-beige2 text-sm font-semibold mt-2">{plan.tag}</p>}
                             <ul className="text-sm mt-4 space-y-2 font-urbanist">
                                 {plan.features.map((feature, featureIndex) => (
                                     <motion.li
                                         key={featureIndex}
                                         className="flex items-center gap-2"
+                                        itemProp="description"
                                     >
                                         <FaCheck className="text-beige2 text-xl" />
                                         {feature}
@@ -131,16 +165,21 @@ const PlansPay: React.FC = () => {
                                 ))}
                             </ul>
                         </div>
-                        <button
-                            onClick={() => window.location.href = plan.link}
-                            className="bg-gradient-to-l from-[#2e5ca7] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2] text-gray-200 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10"
+                        <a
+                            href={plan.link}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = plan.link;
+                            }}
+                            className="bg-gradient-to-l from-[#2e5ca7] to-[#d7ad5e] hover:bg-gradient-to-l hover:from-[#d7ad5e] hover:to-[#3f83f2] text-gray-200 hover:text-gray-50 font-urbanist font-semibold py-2 px-4 rounded-xl mt-5 relative z-10 text-center"
+                            itemProp="url"
                         >
                             {plan.buttonText}
-                        </button>
-                    </motion.div>
+                        </a>
+                    </motion.article>
                 ))}
             </div>
-        </motion.div>
+        </motion.section>
     );
 };
 
